@@ -19,11 +19,11 @@ var skin_resources = [
 ]
 
 export (PlayerSkin) var player_skin := PlayerSkin.BLUE setget set_player_skin
-export (float) var speed := 350.0
-export (float) var acceleration := 2000.0
-export (float) var friction := 1500.0
+export (float) var speed := 250.0
+export (float) var acceleration := 1000.0
+export (float) var friction := 2000.0
 export (float) var sliding_friction := 400.0
-export (float) var jump_speed := 700.0
+export (float) var jump_speed := 400.0
 export (float) var glide_speed := -100.0
 export (float) var terminal_velocity := 1000.0
 export (float) var push_back_speed := 50.0

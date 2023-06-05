@@ -94,10 +94,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 75, 76 ]
+"values": [ 8 ]
 }
 
 [sub_resource type="Animation" id=9]
@@ -437,7 +437,7 @@ texture = ExtResource( 23 )
 offset = Vector2( -65, 32 )
 hframes = 12
 vframes = 7
-frame = 1
+frame = 75
 
 [node name="FinSprite" type="Sprite" parent="."]
 visible = false
@@ -493,7 +493,7 @@ Move -> Idle
 Move -> Fall
 Move -> Jump
 Move -> Duck
-Move -> Slide
+#Move -> Slide
 Jump -> Idle
 Jump -> Fall
 Fall -> Idle

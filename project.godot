@@ -146,6 +146,11 @@ enabled=PoolStringArray( "res://addons/snopek-state-machine/plugin.cfg" )
 
 singletons=[  ]
 
+[global]
+
+physics=false
+gravi=false
+
 [importer_defaults]
 
 texture={
@@ -348,7 +353,7 @@ player4_blop={
 
 [physics]
 
-2d/default_gravity=1500
+2d/default_gravity=980
 
 [rendering]
 
