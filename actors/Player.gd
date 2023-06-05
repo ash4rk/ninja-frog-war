@@ -26,7 +26,7 @@ export (float) var sliding_friction := 400.0
 export (float) var jump_speed := 400.0
 export (float) var glide_speed := -100.0
 export (float) var terminal_velocity := 1000.0
-export (float) var push_back_speed := 50.0
+export (float) var push_back_speed := 40.0
 export (float) var throw_velocity := 300.0
 export (float) var throw_upward_velocity := 500.0
 export (float) var throw_vector_mix := 0.5
@@ -241,9 +241,9 @@ remotesync func _do_die() -> void:
 	var explosion = ExplodeEffect.instance()
 	get_parent().add_child(explosion)
 	explosion.global_position = global_position
-
-	queue_free()
 	emit_signal("player_dead")
+	yield(get_tree().create_timer(1.5), "timeout")
+	queue_free()
 
 func _play_blop_sound() -> void:
 	sounds.play("Blop")

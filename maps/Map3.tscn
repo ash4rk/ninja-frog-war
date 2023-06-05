@@ -51,7 +51,6 @@ format = 1
 tile_data = PoolIntArray( 917529, 9, 0, 917530, 4, 0, 1048583, 4, 0, 1048584, 3, 0 )
 
 [node name="Objects" type="Node2D" parent="."]
-visible = false
 
 [node name="TimedGenerator1" parent="Objects" instance=ExtResource( 9 )]
 position = Vector2( 405, -150 )

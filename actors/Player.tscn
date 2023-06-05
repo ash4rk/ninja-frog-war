@@ -437,7 +437,7 @@ texture = ExtResource( 23 )
 offset = Vector2( -65, 32 )
 hframes = 12
 vframes = 7
-frame = 75
+frame = 8
 
 [node name="FinSprite" type="Sprite" parent="."]
 visible = false
