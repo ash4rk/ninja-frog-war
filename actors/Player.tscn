@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://assets/sprites/whale_orange.png" type="Texture" id=1]
 [ext_resource path="res://actors/player-states/Hurt.gd" type="Script" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://assets/sounds/blops/blop1.wav" type="AudioStream" id=20]
 [ext_resource path="res://assets/sounds/blops/blop2.wav" type="AudioStream" id=21]
 [ext_resource path="res://actors/player-states/Fall.gd" type="Script" id=22]
+[ext_resource path="res://assets/sprites/ninja-frog/ninja-frog-spritesheet.png" type="Texture" id=23]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14.5, 28 )
@@ -51,7 +52,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 140, 141, 142, 143, 144 ]
+"values": [ 60, 61, 62, 63, 64 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -77,10 +78,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 98, 99, 100, 101 ]
+"values": [ 78 ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -96,7 +97,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 112, 113 ]
+"values": [ 75, 76 ]
 }
 
 [sub_resource type="Animation" id=9]
@@ -111,7 +112,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 56 ]
+"values": [ 36 ]
 }
 
 [sub_resource type="Animation" id=10]
@@ -124,14 +125,15 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 42, 43, 44, 45 ]
+"values": [ 36 ]
 }
 
 [sub_resource type="Animation" id=11]
-length = 0.3
+length = 0.4
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
@@ -139,15 +141,16 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 84, 85, 86 ]
+"values": [ 72, 73, 74, 75, 76, 77, 78 ]
 }
 
 [sub_resource type="Animation" id=12]
-length = 0.7
+length = 0.55
 loop = true
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
@@ -155,10 +158,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("FrontPickupPosition:position")
@@ -167,7 +170,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.25, 0.35, 0.45, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ Vector2( -2, -20 ), Vector2( -2, -19 ), Vector2( -2, -17 ), Vector2( -2, -16 ), Vector2( -2, -17 ), Vector2( -2, -19 ), Vector2( -2, -20 ) ]
@@ -179,7 +182,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.25, 0.35, 0.45, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ Vector2( 14, -20 ), Vector2( 14, -19 ), Vector2( 14, -17 ), Vector2( 14, -16 ), Vector2( 14, -17 ), Vector2( 14, -19 ), Vector2( 14, -20 ) ]
@@ -194,14 +197,15 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 28, 29, 30 ]
+"values": [ 24 ]
 }
 
 [sub_resource type="Animation" id=14]
 length = 0.2
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodySprite:frame")
 tracks/0/interp = 1
@@ -209,10 +213,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 70, 71 ]
+"values": [ 20, 21, 22, 23 ]
 }
 
 [sub_resource type="Animation" id=15]
@@ -229,7 +233,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 126, 127, 128, 129 ]
+"values": [ 48, 50, 52, 53 ]
 }
 
 [sub_resource type="Animation" id=16]
@@ -246,7 +250,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 126 ]
+"values": [ 53 ]
 }
 
 [sub_resource type="Animation" id=17]
@@ -425,17 +429,18 @@ collision_mask = 17
 script = ExtResource( 9 )
 
 [node name="BackPickupPosition" type="Position2D" parent="."]
-position = Vector2( 14, -20 )
+position = Vector2( 14, -17 )
 
 [node name="BodySprite" type="Sprite" parent="."]
 position = Vector2( 65, -47 )
-texture = ExtResource( 1 )
-offset = Vector2( -65, 16 )
-hframes = 7
-vframes = 22
-frame = 140
+texture = ExtResource( 23 )
+offset = Vector2( -65, 32 )
+hframes = 12
+vframes = 7
+frame = 78
 
 [node name="FinSprite" type="Sprite" parent="."]
+visible = false
 position = Vector2( 0, -31 )
 texture = ExtResource( 1 )
 hframes = 7
@@ -443,7 +448,7 @@ vframes = 22
 frame = 7
 
 [node name="FrontPickupPosition" type="Position2D" parent="."]
-position = Vector2( -2, -20 )
+position = Vector2( -2, -17 )
 
 [node name="StandingCollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2( 2, -28 )

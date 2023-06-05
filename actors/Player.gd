@@ -12,10 +12,10 @@ enum PlayerSkin {
 }
 
 var skin_resources = [
-	preload("res://assets/sprites/whale_orange.png"),
-	preload("res://assets/sprites/whale_green.png"),
-	preload("res://assets/sprites/whale_blue.png"),
-	preload("res://assets/sprites/whale_purple.png"),
+	preload("res://assets/sprites/ninja-frog/ninja-frog-spritesheet.png"),
+	preload("res://assets/sprites/ninja-frog/ninja-frog-pink-spritesheet.png"),
+	preload("res://assets/sprites/ninja-frog/ninja-frog-dark-green-spritesheet.png"),
+	preload("res://assets/sprites/ninja-frog/ninja-frog-red-spritesheet.png"),
 ]
 
 export (PlayerSkin) var player_skin := PlayerSkin.BLUE setget set_player_skin
