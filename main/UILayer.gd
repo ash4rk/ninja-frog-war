@@ -72,5 +72,3 @@ func hide_all() -> void:
 func _on_BackButton_pressed() -> void:
 	emit_signal("back_button")
 
-func _on_MuteButton_toggled(button_pressed: bool) -> void:
-	AudioServer.set_bus_mute(0, button_pressed)

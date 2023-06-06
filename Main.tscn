@@ -15,9 +15,9 @@
 [ext_resource path="res://assets/music/FISHSTICKS.ogg" type="AudioStream" id=13]
 [ext_resource path="res://main/screens/LeaderboardScreen.tscn" type="PackedScene" id=14]
 [ext_resource path="res://main/screens/CreditsScreen.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/ui/sound-on.png" type="Texture" id=16]
 [ext_resource path="res://main/screens/TransparentButton.gd" type="Script" id=17]
-[ext_resource path="res://assets/ui/mute.png" type="Texture" id=18]
-[ext_resource path="res://assets/ui/close.png" type="Texture" id=19]
+[ext_resource path="res://assets/ui/back.png" type="Texture" id=18]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -68,16 +68,16 @@ text = "Waiting for players..."
 align = 1
 
 [node name="BackButton" type="Button" parent="UILayer/Overlay"]
-visible = false
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -30.0
+margin_left = -41.0
 margin_top = 2.0
 margin_right = -2.0
 margin_bottom = 30.0
+rect_scale = Vector2( 0.1, 0.1 )
 focus_mode = 0
 enabled_focus_mode = 0
-icon = ExtResource( 19 )
+icon = ExtResource( 18 )
 clip_text = true
 script = ExtResource( 17 )
 __meta__ = {
@@ -89,15 +89,13 @@ margin_left = 2.0
 margin_top = 2.0
 margin_right = 30.0
 margin_bottom = 30.0
+rect_scale = Vector2( 0.1, 0.1 )
 focus_mode = 0
 toggle_mode = true
 enabled_focus_mode = 0
-icon = ExtResource( 18 )
+icon = ExtResource( 16 )
 clip_text = true
 script = ExtResource( 17 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Music" type="Node" parent="."]
 script = ExtResource( 9 )
@@ -129,6 +127,6 @@ bus = "Music"
 [connection signal="play_online" from="UILayer/Screens/TitleScreen" to="." method="_on_TitleScreen_play_online"]
 [connection signal="ready_pressed" from="UILayer/Screens/ReadyScreen" to="." method="_on_ReadyScreen_ready_pressed"]
 [connection signal="pressed" from="UILayer/Overlay/BackButton" to="UILayer" method="_on_BackButton_pressed"]
-[connection signal="toggled" from="UILayer/Overlay/MuteButton" to="UILayer" method="_on_MuteButton_toggled"]
+[connection signal="toggled" from="UILayer/Overlay/MuteButton" to="UILayer/Overlay/MuteButton" method="_on_MuteButton_toggled"]
 [connection signal="song_finished" from="Music" to="." method="_on_Music_song_finished"]
 [connection signal="tween_completed" from="Music/Tween" to="Music" method="_on_Tween_tween_completed"]
