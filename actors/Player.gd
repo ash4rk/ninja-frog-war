@@ -180,6 +180,7 @@ remotesync func _try_pickup() -> void:
 
 remotesync func _do_pickup(pickup_path: NodePath) -> void:
 	sounds.play("Pickup")
+	
 	current_pickup = get_node(pickup_path)
 	current_pickup.pickup(self)
 	current_pickup.get_parent().remove_child(current_pickup)
@@ -187,6 +188,8 @@ remotesync func _do_pickup(pickup_path: NodePath) -> void:
 	current_pickup_position = back_pickup_position if current_pickup.pickup_position == Pickup.PickupPosition.BACK else front_pickup_position
 	current_pickup_position.add_child(current_pickup)
 	current_pickup.position = -current_pickup.held_position.position
+	if current_pickup.is_in_group("swords"):
+		current_pickup.set_internal_pickup_position()
 
 remotesync func _do_throw() -> void:
 	if current_pickup == null:
