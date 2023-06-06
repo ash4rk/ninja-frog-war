@@ -1,5 +1,6 @@
 extends Area2D
 
+onready var sprite := $Sprite
 onready var ray_cast := $RayCast2D
 onready var trail := $Trail
 onready var hitbox := $Hitbox

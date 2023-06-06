@@ -71,6 +71,7 @@ remotesync func _do_fire_projectile(_projectile_name: String, _projectile_positi
 		var projectile = projectile_scene.instance()
 		projectile.name = _projectile_name
 		projectile_parent.add_child(projectile)
+		projectile.sprite.flip_h = use_by_player.flip_h
 
 		projectile.shoot(_projectile_position, _projectile_vector, _projectile_range, _projectile_dud)
 		sounds.play("Shoot")
@@ -88,7 +89,7 @@ remotesync func _disintegrate() -> void:
 		var effect = DisintegrateEffect.instance()
 		parent.add_child(effect)
 		effect.global_position = global_position + Vector2(0, 10)
-
+		
 	queue_free()
 
 func _on_CooldownTimer_timeout() -> void:

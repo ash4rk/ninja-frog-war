@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://maps/Map.gd" type="Script" id=1]
 [ext_resource path="res://pickups/Bow.tscn" type="PackedScene" id=2]
+[ext_resource path="res://pickups/Gun.tscn" type="PackedScene" id=3]
 [ext_resource path="res://pickups/Sword.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/tilesets/terrain-tileset.tres" type="TileSet" id=6]
 [ext_resource path="res://assets/backgrounds/Brown.png" type="Texture" id=8]
@@ -55,8 +56,12 @@ position = Vector2( 405, -150 )
 pickup_scene = ExtResource( 5 )
 
 [node name="TimedGenerator2" parent="Objects" instance=ExtResource( 9 )]
-position = Vector2( 464, -150 )
+position = Vector2( 451, -150 )
 pickup_scene = ExtResource( 2 )
+
+[node name="TimedGenerator3" parent="Objects" instance=ExtResource( 9 )]
+position = Vector2( 500, -150 )
+pickup_scene = ExtResource( 3 )
 
 [node name="PlayerStartPositions" type="Node2D" parent="."]
 
