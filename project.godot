@@ -116,7 +116,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Fish Game"
+config/name="Ninja Frog Wars"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 

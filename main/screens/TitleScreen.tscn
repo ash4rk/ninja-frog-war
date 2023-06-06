@@ -1,74 +1,87 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/fonts/monogram_extended.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://components/Title.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/theme.tres" type="Theme" id=2]
 [ext_resource path="res://main/screens/TitleScreen.gd" type="Script" id=3]
-
-[sub_resource type="DynamicFont" id=1]
-size = 160
-font_data = ExtResource( 1 )
+[ext_resource path="res://components/MenuFrog.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/backgrounds/coo-sky-grad-640-400.png" type="Texture" id=5]
+[ext_resource path="res://assets/blue_button_theme.tres" type="Theme" id=6]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 2 )
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_top = -16.0
+margin_bottom = 24.0
+texture = ExtResource( 5 )
+stretch_mode = 1
 
-[node name="TitleLabel" type="Label" parent="."]
-anchor_right = 1.0
-margin_top = 25.0
-margin_bottom = 130.0
-custom_fonts/font = SubResource( 1 )
-text = "Fish Game"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="MenuFrog" parent="." instance=ExtResource( 4 )]
+position = Vector2( 318, 172 )
+scale = Vector2( 6, 6 )
+
+[node name="Title" parent="." instance=ExtResource( 1 )]
+position = Vector2( 310, 82 )
+scale = Vector2( 5.5, 5.5 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -175.0
-margin_bottom = -50.0
-rect_min_size = Vector2( 0, 125 )
+margin_top = -68.0
+margin_bottom = -18.0
+rect_min_size = Vector2( 0, 50 )
 custom_constants/separation = 35
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="LocalButton" type="Button" parent="HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 margin_left = 97.0
 margin_right = 222.0
-margin_bottom = 125.0
+margin_bottom = 50.0
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer2"]
+margin_right = 125.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="LocalButton" type="Button" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 14.0
+margin_right = 125.0
+margin_bottom = 50.0
 rect_min_size = Vector2( 125, 0 )
+theme = ExtResource( 6 )
 text = "Local"
 
-[node name="OnlineButton" type="Button" parent="HBoxContainer"]
+[node name="PlayOnlineButton" type="Button" parent="HBoxContainer"]
 margin_left = 257.0
 margin_right = 382.0
-margin_bottom = 125.0
+margin_bottom = 50.0
 rect_min_size = Vector2( 125, 0 )
-text = "Online"
+text = "Play"
 
-[node name="CreditsButton" type="Button" parent="HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 margin_left = 417.0
 margin_right = 542.0
-margin_bottom = 125.0
+margin_bottom = 50.0
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer"]
+margin_right = 125.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="CreditsButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 14.0
+margin_right = 125.0
+margin_bottom = 50.0
 rect_min_size = Vector2( 125, 0 )
+theme = ExtResource( 6 )
 text = "Credits"
-[connection signal="pressed" from="HBoxContainer/LocalButton" to="." method="_on_LocalButton_pressed"]
-[connection signal="pressed" from="HBoxContainer/OnlineButton" to="." method="_on_OnlineButton_pressed"]
-[connection signal="pressed" from="HBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/LocalButton" to="." method="_on_LocalButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/PlayOnlineButton" to="." method="_on_OnlineButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
