@@ -56,7 +56,7 @@ func _on_Projectile_body_entered(body: Node) -> void:
 		hit()
 	if not body.is_in_group("players"):
 		var pickable_arrow_instance = PICKABLE_ARROW_SCENE.instance()
-		get_tree().root.call_deferred("add_child", pickable_arrow_instance)
+		get_parent().call_deferred("add_child", pickable_arrow_instance)
 		pickable_arrow_instance.global_position = self.global_position
 		pickable_arrow_instance.is_flipped_h = sprite.flip_h
 
