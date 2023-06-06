@@ -1,5 +1,8 @@
 extends Node2D
 
+onready var CONFETTI_PARTICLES_SCENE := preload("res://actors/ConfettiParticles.tscn")
+onready var TROPHY_SCENE := preload("res://pickups/Trophy.tscn")
+
 onready var game = $Game
 onready var ui_layer: UILayer = $UILayer
 onready var ready_screen = $UILayer/Screens/ReadyScreen
@@ -59,11 +62,13 @@ func _on_UILayer_back_button() -> void:
 
 	if GameState.online_play:
 		OnlineMatch.leave()
+		$UILayer/Overlay/ScoreContainer.drop_score()
 
 	if ui_layer.current_screen_name in ['ConnectionScreen', 'MatchScreen', 'CreditsScreen']:
 		ui_layer.show_screen("TitleScreen")
 	elif not GameState.online_play:
 		ui_layer.show_screen("TitleScreen")
+		$UILayer/Overlay/ScoreContainer.drop_score()
 	else:
 		ui_layer.show_screen("MatchScreen")
 
@@ -131,7 +136,7 @@ func stop_game() -> void:
 
 	players.clear()
 	players_ready.clear()
-	players_score.clear()
+#	players_score.clear()
 
 	game.game_stop()
 
@@ -156,9 +161,16 @@ func _on_Game_player_dead(peer_id: int) -> void:
 
 func _on_Game_game_over(peer_id: int) -> void:
 	players_ready.clear()
-
+	
 	if not GameState.online_play:
-		show_winner(players[peer_id])
+		if not players_score.has(peer_id):
+			players_score[peer_id] = 1
+		else:
+			players_score[peer_id] += 1
+
+		var is_match: bool = players_score[peer_id] >= 5
+		
+		show_winner(players[peer_id], peer_id, players_score[peer_id], is_match)
 	elif get_tree().is_network_server():
 		if not players_score.has(peer_id):
 			players_score[peer_id] = 1
@@ -178,7 +190,12 @@ func update_wins_leaderboard() -> void:
 
 remotesync func show_winner(name: String, peer_id: int = 0, score: int = 0, is_match: bool = false) -> void:
 	if is_match:
+		players_score.clear()
 		ui_layer.show_message(name + " WINS THE WHOLE MATCH!")
+		ui_layer.start_win_messaging()
+		yield(_win_congratulations(peer_id), "completed")
+		_on_UILayer_back_button()
+		return
 	else:
 		ui_layer.show_message(name + " wins this round!")
 
@@ -203,3 +220,14 @@ remotesync func show_winner(name: String, peer_id: int = 0, score: int = 0, is_m
 func _on_Music_song_finished(song) -> void:
 	if not music.current_song.playing:
 		music.play_random()
+
+func _win_congratulations(winner_id: int) -> void:
+	var winner_player = game.players_node.get_child(winner_id-1)
+	var confetti_instance = CONFETTI_PARTICLES_SCENE.instance()
+	var trophy_instance = TROPHY_SCENE.instance()
+	winner_player.add_child(confetti_instance)
+	winner_player.get_parent().add_child(trophy_instance)
+	trophy_instance.global_position = Vector2(winner_player.global_position.x,
+											winner_player.global_position.y - 50)
+	
+	yield(get_tree().create_timer(15.0), "timeout")

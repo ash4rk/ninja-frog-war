@@ -1,0 +1,134 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://pickups/Pickup.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/sprites/End (Pressed) (64x64).png" type="Texture" id=2]
+[ext_resource path="res://components/Hitbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://pickups/Trophy.gd" type="Script" id=4]
+[ext_resource path="res://assets/sounds/sword.wav" type="AudioStream" id=5]
+[ext_resource path="res://components/Sounds.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12.5, 14 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Chung"
+length = 0.3
+step = 0.025
+tracks/0/type = "value"
+tracks/0/path = NodePath("Hitbox:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.025, 0.05, 0.075, 0.076, 0.1, 0.125, 0.15, 0.225 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 2, 3, 4, 4, 5, 6, 7, 0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Idle"
+length = 0.001
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Hitbox:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[node name="Trophy" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+scale = Vector2( 0.8, 0.8 )
+z_index = 1
+texture = ExtResource( 2 )
+hframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+position = Vector2( 0.5, 10 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+autoplay = "Idle"
+anims/Chung = SubResource( 3 )
+anims/Idle = SubResource( 2 )
+anims/RESET = SubResource( 4 )
+
+[node name="Hitbox" parent="." index="3" instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 17, 0 )
+collision_mask = 2
+disabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox" index="0"]
+polygon = PoolVector2Array( -26, -40, -15, -39, -9, -37, 9, -22, 14, -12, 15, 3, 11, 17, 3, 30, 0, 30, -17, 13, -18, -26 )
+
+[node name="Sounds" type="Node" parent="." index="4"]
+script = ExtResource( 6 )
+
+[node name="Chung" type="AudioStreamPlayer" parent="Sounds" index="0"]
+stream = ExtResource( 5 )
+bus = "Sound Effects"
+
+[node name="HeldPosition" parent="." index="5"]
+position = Vector2( -9, 17 )

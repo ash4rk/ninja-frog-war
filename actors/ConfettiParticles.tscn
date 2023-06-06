@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://actors/ConfettiParticles.gd" type="Script" id=2]
+[ext_resource path="res://assets/sounds/explosions/explosion3.wav" type="AudioStream" id=4]
+[ext_resource path="res://components/Sounds.gd" type="Script" id=5]
+[ext_resource path="res://assets/sounds/explosions/explosion2.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/sounds/explosions/explosion1.wav" type="AudioStream" id=7]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.994253, 0.00568175 ), 0.0, 0.0, 0, 0 ]
+
+[node name="ConfettiParticles" type="CPUParticles2D"]
+amount = 35
+speed_scale = 0.7
+explosiveness = 0.19
+local_coords = false
+emission_shape = 2
+emission_rect_extents = Vector2( 10, 1 )
+direction = Vector2( 0, -1 )
+spread = 90.0
+gravity = Vector2( 0, 1500 )
+initial_velocity = 600.0
+initial_velocity_random = 0.5
+angular_velocity = 90.0
+angular_velocity_random = 0.5
+linear_accel = 50.0
+linear_accel_random = 0.5
+scale_amount = 10.0
+scale_amount_random = 0.5
+scale_amount_curve = SubResource( 1 )
+hue_variation = 1.0
+hue_variation_random = 1.0
+script = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 13.0
+one_shot = true
+autostart = true
+
+[node name="Sounds" type="Node" parent="."]
+script = ExtResource( 5 )
+
+[node name="Fanfare" type="Node" parent="Sounds"]
+
+[node name="Fanfare1" type="AudioStreamPlayer" parent="Sounds/Fanfare"]
+stream = ExtResource( 7 )
+bus = "Sound Effects"
+
+[node name="Fanfare2" type="AudioStreamPlayer" parent="Sounds/Fanfare"]
+stream = ExtResource( 6 )
+bus = "Sound Effects"
+
+[node name="Fanfare3" type="AudioStreamPlayer" parent="Sounds/Fanfare"]
+stream = ExtResource( 4 )
+bus = "Sound Effects"
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

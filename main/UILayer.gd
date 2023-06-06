@@ -72,3 +72,5 @@ func hide_all() -> void:
 func _on_BackButton_pressed() -> void:
 	emit_signal("back_button")
 
+func start_win_messaging() -> void:
+	$AnimationPlayer.play("win_messaging")

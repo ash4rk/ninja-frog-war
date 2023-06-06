@@ -27,6 +27,9 @@ func game_start(players: Dictionary) -> void:
 # Initializes the game so that it is ready to really start.
 remotesync func _do_game_setup(players: Dictionary) -> void:
 	get_tree().set_pause(true)
+	
+	if players.size() == 2:
+		$"../UILayer/Overlay/ScoreContainer".init()
 
 	if game_started:
 		game_stop()
