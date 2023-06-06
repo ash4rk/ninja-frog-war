@@ -22,9 +22,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0.768627, 0.768627, 1 ), Color( 0.898039, 0, 1, 1 ) ]
 }
 
-[node name="TimedGenerator" type="StaticBody2D" groups=[
-"map_object",
-]]
+[node name="TimedGenerator" type="StaticBody2D" groups=["map_object"]]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

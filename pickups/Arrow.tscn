@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/sprites/gun.png" type="Texture" id=1]
-[ext_resource path="res://pickups/Projectile.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/bow-and-arrows.png" type="Texture" id=1]
+[ext_resource path="res://pickups/Arrow.gd" type="Script" id=2]
 [ext_resource path="res://components/Hitbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://pickups/PickableArrow.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Gradient" id=1]
 colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 0.12549 )
@@ -21,10 +22,22 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 16, 17, 18, 19 ]
+"values": [ 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 5.32228, 13.0, -13.0, 4.0, 0.0 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -39,13 +52,26 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 12 ]
+"values": [ 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
 }
 
 [node name="Projectile" type="Area2D"]
 collision_layer = 0
 collision_mask = 3
 script = ExtResource( 2 )
+PICKABLE_ARROW_SCENE = ExtResource( 4 )
 
 [node name="Trail" type="Line2D" parent="."]
 width = 4.0
@@ -55,11 +81,11 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -5, 1 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 1 )
-hframes = 4
-vframes = 5
-frame = 16
+hframes = 3
+vframes = 3
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )

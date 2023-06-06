@@ -1,11 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://maps/Map.gd" type="Script" id=1]
-[ext_resource path="res://pickups/Gun.tscn" type="PackedScene" id=3]
-[ext_resource path="res://objects/Seaweed.tscn" type="PackedScene" id=4]
+[ext_resource path="res://pickups/Bow.tscn" type="PackedScene" id=2]
 [ext_resource path="res://pickups/Sword.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/tilesets/terrain-tileset.tres" type="TileSet" id=6]
-[ext_resource path="res://objects/Barnacles.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/backgrounds/Brown.png" type="Texture" id=8]
 [ext_resource path="res://objects/TimedGeneratorFlat.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/tilesets/one-way-platforms-tileset.tres" type="TileSet" id=10]
@@ -57,73 +55,8 @@ position = Vector2( 405, -150 )
 pickup_scene = ExtResource( 5 )
 
 [node name="TimedGenerator2" parent="Objects" instance=ExtResource( 9 )]
-position = Vector2( 900, -150 )
-pickup_scene = ExtResource( 5 )
-
-[node name="TimedGenerator3" parent="Objects" instance=ExtResource( 9 )]
-position = Vector2( 645, -540 )
-pickup_scene = ExtResource( 5 )
-
-[node name="TimedGenerator4" parent="Objects" instance=ExtResource( 9 )]
-position = Vector2( 120, -480 )
-pickup_scene = ExtResource( 3 )
-
-[node name="TimedGenerator5" parent="Objects" instance=ExtResource( 9 )]
-position = Vector2( 1260, -450 )
-pickup_scene = ExtResource( 3 )
-
-[node name="TimedGenerator6" parent="Objects" instance=ExtResource( 9 )]
-position = Vector2( 990, -690 )
-pickup_scene = ExtResource( 3 )
-
-[node name="TimedGenerator7" parent="Objects" instance=ExtResource( 9 )]
-position = Vector2( 300, -690 )
-pickup_scene = ExtResource( 3 )
-
-[node name="Seaweed1" parent="Objects" instance=ExtResource( 4 )]
-position = Vector2( 615, -180 )
-
-[node name="Seaweed2" parent="Objects" instance=ExtResource( 4 )]
-position = Vector2( 375, -330 )
-
-[node name="Seaweed3" parent="Objects" instance=ExtResource( 4 )]
-position = Vector2( 600, -510 )
-
-[node name="Seaweed4" parent="Objects" instance=ExtResource( 4 )]
-position = Vector2( 1155, -120 )
-
-[node name="Seaweed5" parent="Objects" instance=ExtResource( 4 )]
-position = Vector2( 75, -180 )
-
-[node name="Seaweed6" parent="Objects" instance=ExtResource( 4 )]
-position = Vector2( 75, -510 )
-
-[node name="Seaweed7" parent="Objects" instance=ExtResource( 4 )]
-position = Vector2( 765, -690 )
-
-[node name="Seaweed8" parent="Objects" instance=ExtResource( 4 )]
-position = Vector2( 1305, -450 )
-
-[node name="Seaweed9" parent="Objects" instance=ExtResource( 4 )]
-position = Vector2( 1065, -630 )
-
-[node name="Barnacles" parent="Objects" instance=ExtResource( 7 )]
-position = Vector2( 930, -330 )
-
-[node name="Barnacles2" parent="Objects" instance=ExtResource( 7 )]
-position = Vector2( 720, -150 )
-
-[node name="Barnacles3" parent="Objects" instance=ExtResource( 7 )]
-position = Vector2( 360, -690 )
-
-[node name="Barnacles4" parent="Objects" instance=ExtResource( 7 )]
-position = Vector2( 750, -480 )
-
-[node name="Barnacles5" parent="Objects" instance=ExtResource( 7 )]
-position = Vector2( 180, -120 )
-
-[node name="Barnacles6" parent="Objects" instance=ExtResource( 7 )]
-position = Vector2( 810, -720 )
+position = Vector2( 464, -150 )
+pickup_scene = ExtResource( 2 )
 
 [node name="PlayerStartPositions" type="Node2D" parent="."]
 
@@ -134,10 +67,10 @@ position = Vector2( 246, -263 )
 position = Vector2( 649, -304 )
 
 [node name="Player3" type="Position2D" parent="PlayerStartPositions"]
-position = Vector2( 420, -330 )
+position = Vector2( 359, -182 )
 
 [node name="Player4" type="Position2D" parent="PlayerStartPositions"]
-position = Vector2( 900, -330 )
+position = Vector2( 558, -180 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -100

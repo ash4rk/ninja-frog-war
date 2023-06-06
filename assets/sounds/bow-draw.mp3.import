@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bow-draw.mp3-483e0b84ac98f04f04b4aa584d008602.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/bow-draw.mp3"
+dest_files=[ "res://.import/bow-draw.mp3-483e0b84ac98f04f04b4aa584d008602.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
