@@ -42,7 +42,7 @@ alignment = 1
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 margin_left = 97.0
 margin_right = 222.0
-margin_bottom = 50.0
+margin_bottom = 51.0
 
 [node name="Control" type="Control" parent="HBoxContainer/VBoxContainer2"]
 margin_right = 125.0
@@ -52,7 +52,7 @@ rect_min_size = Vector2( 0, 10 )
 [node name="LocalButton" type="Button" parent="HBoxContainer/VBoxContainer2"]
 margin_top = 14.0
 margin_right = 125.0
-margin_bottom = 50.0
+margin_bottom = 51.0
 rect_min_size = Vector2( 125, 0 )
 theme = ExtResource( 6 )
 text = "Local"
@@ -60,14 +60,14 @@ text = "Local"
 [node name="PlayOnlineButton" type="Button" parent="HBoxContainer"]
 margin_left = 257.0
 margin_right = 382.0
-margin_bottom = 50.0
+margin_bottom = 51.0
 rect_min_size = Vector2( 125, 0 )
-text = "Play"
+text = "Play!"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 margin_left = 417.0
 margin_right = 542.0
-margin_bottom = 50.0
+margin_bottom = 51.0
 
 [node name="Control" type="Control" parent="HBoxContainer/VBoxContainer"]
 margin_right = 125.0
@@ -77,7 +77,7 @@ rect_min_size = Vector2( 0, 10 )
 [node name="CreditsButton" type="Button" parent="HBoxContainer/VBoxContainer"]
 margin_top = 14.0
 margin_right = 125.0
-margin_bottom = 50.0
+margin_bottom = 51.0
 rect_min_size = Vector2( 125, 0 )
 theme = ExtResource( 6 )
 text = "Credits"
