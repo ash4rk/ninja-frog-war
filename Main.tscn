@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://main/screens/ConnectionScreen.tscn" type="PackedScene" id=2]
@@ -9,10 +9,9 @@
 [ext_resource path="res://main/screens/TitleScreen.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/fonts/monogram.tres" type="DynamicFont" id=8]
 [ext_resource path="res://main/Music.gd" type="Script" id=9]
-[ext_resource path="res://assets/music/BUILD UP.ogg" type="AudioStream" id=10]
-[ext_resource path="res://assets/music/THEME #1.ogg" type="AudioStream" id=11]
-[ext_resource path="res://assets/music/DOMEFIGHTERS.ogg" type="AudioStream" id=12]
-[ext_resource path="res://assets/music/FISHSTICKS.ogg" type="AudioStream" id=13]
+[ext_resource path="res://assets/music/Detective Anthem.wav" type="AudioStream" id=10]
+[ext_resource path="res://assets/music/Rush Beyond All.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets/music/Sunny Sands.wav" type="AudioStream" id=12]
 [ext_resource path="res://main/screens/LeaderboardScreen.tscn" type="PackedScene" id=14]
 [ext_resource path="res://main/screens/CreditsScreen.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/ui/sound-on.png" type="Texture" id=16]
@@ -105,20 +104,16 @@ script = ExtResource( 17 )
 [node name="Music" type="Node" parent="."]
 script = ExtResource( 9 )
 
-[node name="BuildUp" type="AudioStreamPlayer" parent="Music"]
+[node name="DetectiveAnthem" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 10 )
 bus = "Music"
 
-[node name="DomeFighters" type="AudioStreamPlayer" parent="Music"]
-stream = ExtResource( 12 )
-bus = "Music"
-
-[node name="Fishsticks" type="AudioStreamPlayer" parent="Music"]
-stream = ExtResource( 13 )
-bus = "Music"
-
-[node name="Theme1" type="AudioStreamPlayer" parent="Music"]
+[node name="RushBeyondAll" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 11 )
+bus = "Music"
+
+[node name="SunnySands" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 12 )
 bus = "Music"
 
 [node name="Tween" type="Tween" parent="Music"]
