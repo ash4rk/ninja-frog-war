@@ -11,7 +11,7 @@ _data = [ Vector2( 0, 0.101023 ), 0.0, 0.0, 0, 0, Vector2( 0.745843, 0.0560227 )
 
 [sub_resource type="Gradient" id=4]
 offsets = PoolRealArray( 0, 0.851759, 1 )
-colors = PoolColorArray( 0.898039, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 )
+colors = PoolColorArray( 0.578799, 0.113725, 0.631373, 1, 1, 1, 1, 1, 1, 1, 1, 1 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 1 )
@@ -26,10 +26,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.7 ),
-"transitions": PoolRealArray( 1, 6 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( -2, -2 ),
 "update": 0,
-"values": [ Color( 1, 0.768627, 0.768627, 1 ), Color( 0.898039, 0, 1, 1 ) ]
+"values": [ Color( 0.807843, 0.576471, 0.937255, 1 ), Color( 0.631373, 0.113725, 0.576471, 1 ) ]
 }
 
 [node name="TimedGenerator" type="StaticBody2D" groups=["map_object"]]
@@ -46,11 +46,12 @@ texture = ExtResource( 3 )
 emission_shape = 2
 emission_rect_extents = Vector2( 11, 1 )
 gravity = Vector2( 0, -98 )
+orbit_velocity_random = 0.95
 scale_amount_curve = SubResource( 3 )
 color_ramp = SubResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 1, 0.768627, 0.768627, 1 )
+modulate = Color( 0.113725, 0.423529, 0.631373, 1 )
 position = Vector2( 15, -15 )
 texture = ExtResource( 1 )
 
