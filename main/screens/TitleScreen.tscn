@@ -246,10 +246,19 @@ group = SubResource( 1 )
 custom_styles/disabled = SubResource( 7 )
 group = SubResource( 1 )
 
-[node name="ShopCharItem" parent="ShopWindow/TabContainer/Frogs/ScrollContainer/VBoxContainer" index="0"]
+[node name="VBoxContainer" parent="ShopWindow/TabContainer/Frogs/ScrollContainer" index="0"]
+margin_bottom = 196.0
+
+[node name="FrogCharItem" parent="ShopWindow/TabContainer/Frogs/ScrollContainer/VBoxContainer" index="0"]
 menu_frog_scene_path = NodePath("../../../../../../MenuFrog")
 
-[node name="ShopCharItem2" parent="ShopWindow/TabContainer/Frogs/ScrollContainer/VBoxContainer" index="1"]
+[node name="MaskDudeCharItem" parent="ShopWindow/TabContainer/Frogs/ScrollContainer/VBoxContainer" index="1"]
+menu_frog_scene_path = NodePath("../../../../../../MenuFrog")
+
+[node name="PinkManCharItem" parent="ShopWindow/TabContainer/Frogs/ScrollContainer/VBoxContainer" index="2"]
+menu_frog_scene_path = NodePath("../../../../../../MenuFrog")
+
+[node name="VirtualGuyCharItem" parent="ShopWindow/TabContainer/Frogs/ScrollContainer/VBoxContainer" index="3"]
 menu_frog_scene_path = NodePath("../../../../../../MenuFrog")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]

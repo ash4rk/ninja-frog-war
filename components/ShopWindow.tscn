@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://components/ShopCharItem.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/fonts/monogram-cyrillic-extended.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://components/ColourButtonGroup.tres" type="ButtonGroup" id=4]
 [ext_resource path="res://components/ColoursShopMenu.gd" type="Script" id=5]
 [ext_resource path="res://components/ShopColourItem.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/sprites/menu/virtual-guy-buy-icon.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/menu/mask-dude-buy-icon.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/menu/ninja-frog-buy-icon.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/menu/pink-man-buy-icon.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -318,18 +322,36 @@ scroll_horizontal_enabled = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Frogs/ScrollContainer"]
 margin_right = 193.0
-margin_bottom = 92.0
+margin_bottom = 196.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
 custom_constants/separation = 12
 
-[node name="ShopCharItem" parent="TabContainer/Frogs/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
+[node name="FrogCharItem" parent="TabContainer/Frogs/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
 margin_right = 193.0
+shop_icon = ExtResource( 9 )
 is_purchased = true
 
-[node name="ShopCharItem2" parent="TabContainer/Frogs/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
+[node name="MaskDudeCharItem" parent="TabContainer/Frogs/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
 margin_top = 52.0
 margin_right = 193.0
 margin_bottom = 92.0
+shop_icon = ExtResource( 8 )
 item_index = 1
-price = 300
+price = 480
+
+[node name="PinkManCharItem" parent="TabContainer/Frogs/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 52.0
+margin_right = 193.0
+margin_bottom = 92.0
+shop_icon = ExtResource( 10 )
+item_index = 2
+price = 3200
+
+[node name="VirtualGuyCharItem" parent="TabContainer/Frogs/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 52.0
+margin_right = 193.0
+margin_bottom = 92.0
+shop_icon = ExtResource( 7 )
+item_index = 3
+price = 6300

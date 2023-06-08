@@ -25,9 +25,25 @@ var mask_dude_resources = [
 	#
 ]
 
+var pink_man_resources = [
+	preload("res://assets/sprites/pink-man/pink-man-body-head-base.png"),
+	preload("res://assets/sprites/pink-man/pink-man-body-head-green.png"),
+	preload("res://assets/sprites/pink-man/pink-man-body-head-purple.png"),
+	preload("res://assets/sprites/pink-man/pink-man-body-head-yellow.png"),
+]
+
+var virtual_guy_resources = [
+	preload("res://assets/sprites/virtual-guy/body-head-base-virtual-guy.png"),
+	preload("res://assets/sprites/virtual-guy/body-head-green-virtual-guy.png"),
+	preload("res://assets/sprites/virtual-guy/body-head-orange-virtual-guy.png"),
+	preload("res://assets/sprites/virtual-guy/body-head-purple-virtual-guy.png"),
+]
+
 var skins = [
 	frog_skin_resources,
-	mask_dude_resources
+	mask_dude_resources,
+	pink_man_resources,
+	virtual_guy_resources
 ]
 
 var max_dist = 1
