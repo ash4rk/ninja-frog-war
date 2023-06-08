@@ -128,6 +128,7 @@ Online="*res://autoload/Online.gd"
 OnlineMatch="*res://autoload/OnlineMatch.gd"
 GameState="*res://autoload/GameState.gd"
 Util="*res://autoload/Util.gd"
+ShopPurchases="*res://autoload/ShopPurchases.gd"
 
 [display]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://components/Title.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/theme.tres" type="Theme" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://components/MenuFrog.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/backgrounds/coo-sky-grad-640-400.png" type="Texture" id=5]
 [ext_resource path="res://assets/blue_button_theme.tres" type="Theme" id=6]
+[ext_resource path="res://components/ShopWindow.tscn" type="PackedScene" id=7]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -28,6 +29,32 @@ scale = Vector2( 6, 6 )
 [node name="Title" parent="." instance=ExtResource( 1 )]
 position = Vector2( 310, 82 )
 scale = Vector2( 5.5, 5.5 )
+
+[node name="Coins" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -133.0
+margin_right = -11.0
+margin_bottom = 33.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Coins"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="CoinsLabel" type="Label" parent="Coins/HBoxContainer"]
+margin_left = 6.0
+margin_right = 96.0
+margin_bottom = 33.0
+text = "Coins:"
+
+[node name="CoinsValueLabel" type="Label" parent="Coins/HBoxContainer"]
+margin_left = 100.0
+margin_right = 115.0
+margin_bottom = 33.0
+text = "0"
+
+[node name="ShopWindow" parent="." instance=ExtResource( 7 )]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_top = 1.0

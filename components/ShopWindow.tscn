@@ -1,0 +1,89 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://components/ShopCharItem.tscn" type="PackedScene" id=1]
+
+[node name="ShopWindow" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -237.0
+margin_top = -117.0
+margin_bottom = 78.0
+
+[node name="Colours" type="Control" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Colours"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+columns = 3
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/Colours/GridContainer"]
+margin_left = 25.0
+margin_right = 49.0
+margin_bottom = 24.0
+size_flags_horizontal = 6
+align = 1
+icon_align = 1
+
+[node name="CheckBox2" type="CheckBox" parent="TabContainer/Colours/GridContainer"]
+margin_left = 103.0
+margin_right = 127.0
+margin_bottom = 24.0
+size_flags_horizontal = 6
+align = 1
+icon_align = 1
+
+[node name="CheckBox3" type="CheckBox" parent="TabContainer/Colours/GridContainer"]
+margin_left = 180.0
+margin_right = 204.0
+margin_bottom = 24.0
+size_flags_horizontal = 6
+align = 1
+icon_align = 1
+
+[node name="CheckBox4" type="CheckBox" parent="TabContainer/Colours/GridContainer"]
+margin_left = 25.0
+margin_top = 28.0
+margin_right = 49.0
+margin_bottom = 52.0
+size_flags_horizontal = 6
+align = 1
+icon_align = 1
+
+[node name="Chars" type="Control" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Chars"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+scroll_horizontal_enabled = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Chars/ScrollContainer"]
+margin_right = 229.0
+margin_bottom = 92.0
+size_flags_horizontal = 3
+custom_constants/separation = 12
+
+[node name="ShopCharItem" parent="TabContainer/Chars/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
+is_purchased = true
+
+[node name="ShopCharItem2" parent="TabContainer/Chars/ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
+item_index = 1
+price = 300
