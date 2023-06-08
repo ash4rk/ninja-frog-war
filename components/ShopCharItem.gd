@@ -9,7 +9,7 @@ export (int) var item_index := 0
 export (int) var price := 10
 
 func _ready():
-	is_purchased = ShopPurchases.purchases.bought_characters[item_index]
+	is_purchased = ShopPurchases.save_data.bought_characters[item_index]
 	
 	$Sprite.texture = shop_icon
 	$PriceLabel.text = str(price)
@@ -27,7 +27,7 @@ func _on_Button_pressed():
 func _try_to_buy_character():
 	if ShopPurchases.coins >= price:
 		ShopPurchases.coins -= price
-		ShopPurchases.purchases.bought_characters = true
+		ShopPurchases.save_data.bought_characters[item_index] = true
 		is_purchased = true
 		$Button.text = "Pick"
 		$PriceLabel.hide()
