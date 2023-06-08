@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://components/Title.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/theme.tres" type="Theme" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://assets/backgrounds/coo-sky-grad-640-400.png" type="Texture" id=5]
 [ext_resource path="res://assets/blue_button_theme.tres" type="Theme" id=6]
 [ext_resource path="res://components/ShopWindow.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/sprites/menu/output-onlinepngtools(6).png" type="Texture" id=8]
+[ext_resource path="res://assets/fonts/monogram-cyrillic-extended.ttf" type="DynamicFontData" id=9]
 
 [sub_resource type="ButtonGroup" id=1]
 
@@ -95,6 +97,84 @@ shadow_offset = Vector2( 2.79, 3.891 )
 anti_aliasing = false
 anti_aliasing_size = 1.538
 
+[sub_resource type="StyleBoxFlat" id=8]
+content_margin_left = 10.0
+bg_color = Color( 0.074707, 0.268455, 0.398438, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.113725, 0.113725, 0.12549, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=9]
+content_margin_left = 10.0
+content_margin_right = 5.0
+bg_color = Color( 0.0423126, 0.154921, 0.230469, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0.0392157, 0.305882, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=10]
+content_margin_left = 10.0
+content_margin_right = 5.0
+bg_color = Color( 0.113725, 0.423529, 0.631373, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0.0392157, 0.305882, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=11]
+content_margin_left = 10.0
+content_margin_right = 5.0
+bg_color = Color( 0.113725, 0.423529, 0.631373, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0.0392157, 0.305882, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="DynamicFont" id=12]
+font_data = ExtResource( 9 )
+
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -142,6 +222,8 @@ margin_bottom = 33.0
 text = "0"
 
 [node name="ShopWindow" parent="." instance=ExtResource( 7 )]
+margin_left = 200.0
+margin_right = 200.0
 
 [node name="Colours" parent="ShopWindow/TabContainer" index="0"]
 group = SubResource( 1 )
@@ -219,18 +301,42 @@ margin_right = 125.0
 margin_bottom = 10.0
 rect_min_size = Vector2( 0, 10 )
 
-[node name="CreditsButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="Shop" type="Button" parent="HBoxContainer/VBoxContainer"]
 margin_top = 14.0
 margin_right = 125.0
 margin_bottom = 51.0
 rect_min_size = Vector2( 125, 0 )
 focus_mode = 0
 theme = ExtResource( 6 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+toggle_mode = true
 enabled_focus_mode = 0
+text = "Shop"
+icon = ExtResource( 8 )
+expand_icon = true
+
+[node name="CreditsButton" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0.686275 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -73.0
+margin_top = -19.0
+margin_right = 15.0
+margin_bottom = 3.0
+theme = ExtResource( 6 )
+custom_fonts/font = SubResource( 12 )
 text = "Credits"
+
+[node name="Tween" type="Tween" parent="."]
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer2/LocalButton" to="." method="_on_LocalButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/PlayOnlineButton" to="." method="_on_OnlineButton_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Shop" to="." method="_on_Shop_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
 
 [editable path="ShopWindow"]
