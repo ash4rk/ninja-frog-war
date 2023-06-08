@@ -74,6 +74,12 @@ group = SubResource( 1 )
 [node name="CyanColButton" parent="ShopWindow/TabContainer/Colours/GridContainer" index="3"]
 group = SubResource( 1 )
 
+[node name="ShopCharItem" parent="ShopWindow/TabContainer/Frogs/ScrollContainer/VBoxContainer" index="0"]
+menu_frog_scene_path = NodePath("../../../../../../MenuFrog")
+
+[node name="ShopCharItem2" parent="ShopWindow/TabContainer/Frogs/ScrollContainer/VBoxContainer" index="1"]
+menu_frog_scene_path = NodePath("../../../../../../MenuFrog")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_top = 1.0
 anchor_right = 1.0

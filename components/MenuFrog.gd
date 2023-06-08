@@ -3,13 +3,33 @@ extends Node2D
 onready var head_sprite = $BodySprite/HeadPivot/HeadSprite
 onready var shadow_sprite = $ShadowPivot/Shadow
 
-var skin_resources =[
+var picked_skin_index : int = 0
+var picked_frog_index : int = 0
+
+var frog_skin_resources = [
 	preload("res://assets/sprites/ninja-frog/body-head-frog.png"),
 	preload("res://assets/sprites/ninja-frog/body-head-frog-pink.png"),
 	preload("res://assets/sprites/ninja-frog/body-head-frog-red.png"),
 	preload("res://assets/sprites/ninja-frog/body-head-frog-cyan.png"),
 ]
- 
+
+var mask_dude_resources = [
+	preload("res://assets/sprites/mask-dude/mask-dude-body-head-green.png"),
+	preload("res://assets/sprites/mask-dude/mask-dude-body-head-pink.png"),
+	preload("res://assets/sprites/mask-dude/mask-dude-body-head-base.png"),
+	preload("res://assets/sprites/mask-dude/mask-dude-body-head-light-blue.png"),
+	# are not yet in use
+	preload("res://assets/sprites/mask-dude/mask-dude-body-head-yellow.png"),
+	preload("res://assets/sprites/mask-dude/mask-dude-body-head-purple.png"),
+	preload("res://assets/sprites/mask-dude/mask-dude-body-head-super-white.png"),
+	#
+]
+
+var skins = [
+	frog_skin_resources,
+	mask_dude_resources
+]
+
 var max_dist = 1
 var max_shadow_dist = Vector2(0.5, 0.1)
 var active_skin_index: int = 0
@@ -29,5 +49,11 @@ func _process(_delta):
 	$BodySprite.flip_h = mouse_pos.x < 0
 	
 func change_skin(skin_index): 
-	$BodySprite.texture = skin_resources[skin_index]
-	$BodySprite/HeadPivot/HeadSprite.texture = skin_resources[skin_index]
+	picked_skin_index = skin_index
+	$BodySprite.texture = skins[picked_frog_index][skin_index]
+	$BodySprite/HeadPivot/HeadSprite.texture = skins[picked_frog_index][skin_index]
+
+func change_frog(frog_index):
+	picked_frog_index = frog_index
+	$BodySprite.texture = skins[frog_index][0]
+	$BodySprite/HeadPivot/HeadSprite.texture = skins[frog_index][0]
