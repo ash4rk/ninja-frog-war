@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/backgrounds/coo-sky-grad-640-400.png" type="Texture" id=5]
 [ext_resource path="res://assets/blue_button_theme.tres" type="Theme" id=6]
 [ext_resource path="res://components/ShopWindow.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/sprites/menu/output-onlinepngtools(6).png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/menu/shop-icon.png" type="Texture" id=8]
 [ext_resource path="res://assets/fonts/monogram-cyrillic-extended.ttf" type="DynamicFontData" id=9]
 
 [sub_resource type="ButtonGroup" id=1]
@@ -245,9 +245,6 @@ group = SubResource( 1 )
 [node name="CyanColButton" parent="ShopWindow/TabContainer/Colours/GridContainer" index="3"]
 custom_styles/disabled = SubResource( 7 )
 group = SubResource( 1 )
-
-[node name="VBoxContainer" parent="ShopWindow/TabContainer/Frogs/ScrollContainer" index="0"]
-margin_bottom = 196.0
 
 [node name="FrogCharItem" parent="ShopWindow/TabContainer/Frogs/ScrollContainer/VBoxContainer" index="0"]
 menu_frog_scene_path = NodePath("../../../../../../MenuFrog")
