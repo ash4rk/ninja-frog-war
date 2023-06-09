@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://components/Title.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/theme.tres" type="Theme" id=2]
@@ -10,6 +10,233 @@
 [ext_resource path="res://assets/sprites/menu/shop-icon.png" type="Texture" id=8]
 [ext_resource path="res://assets/fonts/monogram-cyrillic-extended.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://assets/sprites/orange.png" type="Texture" id=10]
+
+[sub_resource type="Animation" id=14]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../CoinGainSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -60, 122 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../CoinGainSprite2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -48, 114 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../CoinGainSprite3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -65, 108 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../GainLabel:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 72, 25 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../GainLabel:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "coin_gain"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../CoinGainSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.45, 0.86 ),
+"transitions": PoolRealArray( 1, 1, 2, 2 ),
+"update": 0,
+"values": [ Vector2( -180, 143 ), Vector2( -180, 143 ), Vector2( -66, 110 ), Vector2( 22, 28 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../CoinGainSprite2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.45, 0.79 ),
+"transitions": PoolRealArray( 1, 1, 2, 2 ),
+"update": 0,
+"values": [ Vector2( -172, 150 ), Vector2( -172, 150 ), Vector2( -48, 114 ), Vector2( 23, 25 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../CoinGainSprite3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.15, 0.4, 0.93 ),
+"transitions": PoolRealArray( 1, 1, 2, 2 ),
+"update": 0,
+"values": [ Vector2( -184, 154 ), Vector2( -184, 154 ), Vector2( -65, 108 ), Vector2( 26, 22 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.79, 0.85, 0.86, 0.92, 0.93, 0.95 ),
+"transitions": PoolRealArray( 0, 0, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.742, 1.75 ), Vector2( 1.75, 2.539 ), Vector2( 1.75, 1.75 ), Vector2( 1.75, 2.539 ), Vector2( 1.75, 1.75 ), Vector2( 1.75, 2.539 ), Vector2( 1.75, 1.75 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../CoinGainSprite:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.86 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../CoinGainSprite2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.79 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../CoinGainSprite3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.93 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../CoinGainSprite:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 0.01, 0.01 ), Vector2( 1.75, 1.75 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../CoinGainSprite2:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 0.01, 0.01 ), Vector2( 1.75, 1.75 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../CoinGainSprite3:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 0.01, 0.01 ), Vector2( 1.75, 1.75 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "gain_popup"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("../GainLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 0.406126 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../GainLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 0.406126 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../GainLabel:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( -0.5, 0 ),
+"update": 0,
+"values": [ Vector2( -8, 25 ), Vector2( 72, 25 ) ]
+}
 
 [sub_resource type="Animation" id=13]
 resource_name = "idle"
@@ -235,15 +462,46 @@ margin_right = 66.0
 margin_bottom = 33.0
 text = "0"
 
-[node name="Sprite" type="Sprite" parent="Coins"]
-position = Vector2( 26, 18 )
-scale = Vector2( 1.75, 1.75 )
+[node name="CoinGainSprite" type="Sprite" parent="Coins"]
+position = Vector2( -60, 122 )
+scale = Vector2( 0.01, 0.01 )
 texture = ExtResource( 10 )
 hframes = 17
-frame = 16
+frame = 11
+
+[node name="CoinGainSprite2" type="Sprite" parent="Coins"]
+position = Vector2( -48, 114 )
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 10 )
+hframes = 17
+frame = 11
+
+[node name="CoinGainSprite3" type="Sprite" parent="Coins"]
+position = Vector2( -65, 108 )
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 10 )
+hframes = 17
+frame = 11
+
+[node name="GainLabel" type="Label" parent="Coins"]
+visible = false
+margin_left = 72.0
+margin_top = 25.0
+margin_right = 117.0
+margin_bottom = 58.0
+text = "+10"
+
+[node name="Sprite" type="Sprite" parent="Coins"]
+position = Vector2( 26, 18 )
+scale = Vector2( 1.742, 1.75 )
+texture = ExtResource( 10 )
+hframes = 17
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Coins/Sprite"]
-autoplay = "idle"
+autoplay = "RESET"
+anims/RESET = SubResource( 14 )
+anims/coin_gain = SubResource( 15 )
+anims/gain_popup = SubResource( 16 )
 anims/idle = SubResource( 13 )
 
 [node name="ShopWindow" parent="." instance=ExtResource( 7 )]
@@ -363,11 +621,20 @@ theme = ExtResource( 6 )
 custom_fonts/font = SubResource( 12 )
 text = "Credits"
 
+[node name="AddCoinsButton" type="Button" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -18.5
+margin_right = 154.0
+margin_bottom = 18.5
+text = "Add Coins!"
+
 [node name="Tween" type="Tween" parent="."]
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer2/LocalButton" to="." method="_on_LocalButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/PlayOnlineButton" to="." method="_on_OnlineButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Shop" to="." method="_on_Shop_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="AddCoinsButton" to="." method="_on_AddCoinsButton_pressed"]
 
 [editable path="ShopWindow"]
