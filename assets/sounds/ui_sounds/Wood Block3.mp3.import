@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Wood Block3.mp3-3dd5f8383ce50563f28fd2d1891feaa9.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/ui_sounds/Wood Block3.mp3"
+dest_files=[ "res://.import/Wood Block3.mp3-3dd5f8383ce50563f28fd2d1891feaa9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

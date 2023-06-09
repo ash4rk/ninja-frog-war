@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Coffee1.mp3-2f89c01c9839ba3499cd945dbcd96bb9.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/ui_sounds/Coffee1.mp3"
+dest_files=[ "res://.import/Coffee1.mp3-2f89c01c9839ba3499cd945dbcd96bb9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

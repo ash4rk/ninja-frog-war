@@ -7,6 +7,7 @@ export (PackedScene) var map_scene = preload("res://maps/Map3.tscn")
 onready var map: Node2D = $Map
 onready var players_node := $Players
 onready var camera := $Camera2D
+onready var anim_player := $CanvasLayer/AnimationPlayer
 onready var original_camera_position: Vector2 = camera.global_position
 
 var game_started := false
@@ -83,6 +84,8 @@ remotesync func _do_game_start() -> void:
 	if map.has_method('map_start'):
 		map.map_start()
 	emit_signal("game_started")
+	anim_player.play("prepare_countdown")
+	yield(anim_player, "animation_finished")
 	get_tree().set_pause(false)
 
 func game_stop() -> void:

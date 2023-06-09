@@ -3,7 +3,6 @@ extends Node2D
 const TILE_SIZE = Vector2(16, 16)
 
 func map_start() -> void:
-	
 	get_tree().call_group("map_object", "map_object_start")
 
 func map_stop() -> void:

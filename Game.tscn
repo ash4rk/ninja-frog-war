@@ -1,7 +1,138 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Camera.gd" type="Script" id=1]
 [ext_resource path="res://Game.gd" type="Script" id=2]
+[ext_resource path="res://assets/sounds/ui_sounds/Retro11.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/fonts/Text (White) (8x10).png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "RESET"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("CountdownSprite1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CountdownSprite2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CountdownSprite1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 287, 150 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CountdownAudioPlayer:pitch_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "prepare_countdown"
+length = 2.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("CountdownSprite1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6, 1.2, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 33, 32, 31, 6 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CountdownSprite1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CountdownSprite1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 0, 0 ),
+"update": 0,
+"values": [ Vector2( 308, 150 ), Vector2( 287, 150 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CountdownSprite2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1.8, 2.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("CountdownAudioPlayer:pitch_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.8, 1.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("CountdownAudioPlayer:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.6, 1.2, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, true, true ]
+}
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 2 )
@@ -17,3 +148,36 @@ limit_bottom = 0
 script = ExtResource( 1 )
 player_container_path = NodePath("../Players")
 zoom_offset = 0.5
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="CountdownSprite1" type="Sprite" parent="CanvasLayer"]
+visible = false
+position = Vector2( 287, 150 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 4 )
+hframes = 10
+vframes = 5
+frame = 6
+
+[node name="CountdownSprite2" type="Sprite" parent="CanvasLayer"]
+visible = false
+position = Vector2( 331, 150 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 4 )
+hframes = 10
+vframes = 5
+frame = 14
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+pause_mode = 2
+autoplay = "RESET"
+anims/RESET = SubResource( 1 )
+anims/prepare_countdown = SubResource( 2 )
+
+[node name="CountdownAudioPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
+pause_mode = 2
+stream = ExtResource( 3 )
+volume_db = 17.029
+bus = "Sound Effects"
