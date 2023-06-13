@@ -1,10 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://actors/ConfettiParticles.gd" type="Script" id=2]
-[ext_resource path="res://assets/sounds/explosions/explosion3.wav" type="AudioStream" id=4]
 [ext_resource path="res://components/Sounds.gd" type="Script" id=5]
-[ext_resource path="res://assets/sounds/explosions/explosion2.wav" type="AudioStream" id=6]
-[ext_resource path="res://assets/sounds/explosions/explosion1.wav" type="AudioStream" id=7]
 
 [sub_resource type="Curve" id=1]
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.994253, 0.00568175 ), 0.0, 0.0, 0, 0 ]
@@ -43,15 +40,12 @@ script = ExtResource( 5 )
 [node name="Fanfare" type="Node" parent="Sounds"]
 
 [node name="Fanfare1" type="AudioStreamPlayer" parent="Sounds/Fanfare"]
-stream = ExtResource( 7 )
 bus = "Sound Effects"
 
 [node name="Fanfare2" type="AudioStreamPlayer" parent="Sounds/Fanfare"]
-stream = ExtResource( 6 )
 bus = "Sound Effects"
 
 [node name="Fanfare3" type="AudioStreamPlayer" parent="Sounds/Fanfare"]
-stream = ExtResource( 4 )
 bus = "Sound Effects"
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

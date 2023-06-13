@@ -6,17 +6,17 @@
 [ext_resource path="res://actors/player-states/Duck.gd" type="Script" id=4]
 [ext_resource path="res://assets/sounds/jump.wav" type="AudioStream" id=5]
 [ext_resource path="res://components/Sounds.gd" type="Script" id=6]
-[ext_resource path="res://assets/sounds/pickup.wav" type="AudioStream" id=7]
-[ext_resource path="res://assets/sounds/throw.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/sounds/ui_sounds/Coffee1.mp3" type="AudioStream" id=7]
+[ext_resource path="res://assets/sounds/ui_sounds/Coffee2.mp3" type="AudioStream" id=8]
 [ext_resource path="res://actors/Player.gd" type="Script" id=9]
 [ext_resource path="res://assets/sounds/hurt.wav" type="AudioStream" id=10]
 [ext_resource path="res://actors/player-states/Move.gd" type="Script" id=11]
 [ext_resource path="res://addons/snopek-state-machine/StateMachine.gd" type="Script" id=12]
-[ext_resource path="res://assets/sounds/explosions/explosion3.wav" type="AudioStream" id=13]
-[ext_resource path="res://assets/sounds/explosions/explosion2.wav" type="AudioStream" id=14]
+[ext_resource path="res://assets/sounds/explosions/explosion-2.wav" type="AudioStream" id=13]
+[ext_resource path="res://assets/sounds/explosions/explosion-3.wav" type="AudioStream" id=14]
 [ext_resource path="res://actors/player-states/Jump.gd" type="Script" id=15]
 [ext_resource path="res://actors/player-states/Idle.gd" type="Script" id=16]
-[ext_resource path="res://assets/sounds/explosions/explosion1.wav" type="AudioStream" id=17]
+[ext_resource path="res://assets/sounds/explosions/explosion-1.wav" type="AudioStream" id=17]
 [ext_resource path="res://actors/player-states/Slide.gd" type="Script" id=18]
 [ext_resource path="res://assets/sounds/blops/blop3.wav" type="AudioStream" id=19]
 [ext_resource path="res://assets/sounds/blops/blop1.wav" type="AudioStream" id=20]
@@ -558,33 +558,39 @@ script = ExtResource( 6 )
 
 [node name="Jump" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 5 )
-volume_db = -5.0
+volume_db = 5.0
 bus = "Sound Effects"
 
 [node name="Pickup" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 7 )
+volume_db = 5.0
 bus = "Sound Effects"
 
 [node name="Throw" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 8 )
+volume_db = 5.0
 bus = "Sound Effects"
 
 [node name="Hurt" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 10 )
+volume_db = 5.0
 bus = "Sound Effects"
 
 [node name="Explode" type="Node" parent="Sounds"]
 
 [node name="Explode1" type="AudioStreamPlayer" parent="Sounds/Explode"]
 stream = ExtResource( 17 )
+volume_db = 5.0
 bus = "Sound Effects"
 
 [node name="Explode2" type="AudioStreamPlayer" parent="Sounds/Explode"]
-stream = ExtResource( 14 )
+stream = ExtResource( 13 )
+volume_db = 5.0
 bus = "Sound Effects"
 
 [node name="Explode3" type="AudioStreamPlayer" parent="Sounds/Explode"]
-stream = ExtResource( 13 )
+stream = ExtResource( 14 )
+volume_db = 5.0
 bus = "Sound Effects"
 
 [node name="Blop" type="Node" parent="Sounds"]

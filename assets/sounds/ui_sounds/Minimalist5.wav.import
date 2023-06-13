@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/sword.wav-fb5c9c2bd55c59c007aafc8b0e334c9c.sample"
+path="res://.import/Minimalist5.wav-c3977e32f465f5acb03515a5770990c1.sample"
 
 [deps]
 
-source_file="res://assets/sounds/sword.wav"
-dest_files=[ "res://.import/sword.wav-fb5c9c2bd55c59c007aafc8b0e334c9c.sample" ]
+source_file="res://assets/sounds/ui_sounds/Minimalist5.wav"
+dest_files=[ "res://.import/Minimalist5.wav-c3977e32f465f5acb03515a5770990c1.sample" ]
 
 [params]
 
