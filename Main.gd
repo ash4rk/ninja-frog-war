@@ -16,6 +16,8 @@ var players_score := {}
 var match_started := false
 
 func _ready() -> void:
+	YandexSdk.js_show_ad()
+	
 	OnlineMatch.connect("error", self, "_on_OnlineMatch_error")
 	OnlineMatch.connect("disconnected", self, "_on_OnlineMatch_disconnected")
 	OnlineMatch.connect("player_joined", self, "_on_OnlineMatch_player_joined")
@@ -194,6 +196,7 @@ remotesync func show_winner(name: String, peer_id: int = 0, score: int = 0, is_m
 		ui_layer.show_message(name + " WINS THE WHOLE MATCH!")
 		ui_layer.start_win_messaging()
 		yield(_win_congratulations(peer_id), "completed")
+		YandexSdk.js_show_ad()
 		_on_UILayer_back_button()
 		return
 	else:

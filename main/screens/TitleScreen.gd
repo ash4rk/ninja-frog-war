@@ -49,4 +49,4 @@ func _on_Shop_pressed():
 	$Tween.start()
 
 func _on_AddCoinsButton_pressed():
-	ShopPurchases.coins += int(rand_range(76, 145))
+	YandexSdk.js_show_rewarded_ad()
