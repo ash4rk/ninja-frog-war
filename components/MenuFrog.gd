@@ -3,8 +3,6 @@ extends Node2D
 onready var head_sprite = $BodySprite/HeadPivot/HeadSprite
 onready var shadow_sprite = $ShadowPivot/Shadow
 
-var picked_skin_index : int = 0
-var picked_frog_index : int = 0
 
 var frog_skin_resources = [
 	preload("res://assets/sprites/ninja-frog/body-head-frog.png"),
@@ -65,11 +63,11 @@ func _process(_delta):
 	$BodySprite.flip_h = mouse_pos.x < 0
 	
 func change_skin(skin_index): 
-	picked_skin_index = skin_index
-	$BodySprite.texture = skins[picked_frog_index][skin_index]
-	$BodySprite/HeadPivot/HeadSprite.texture = skins[picked_frog_index][skin_index]
+	ShopPurchases.picked_skin_index = skin_index
+	$BodySprite.texture = skins[ShopPurchases.picked_frog_index][skin_index]
+	$BodySprite/HeadPivot/HeadSprite.texture = skins[ShopPurchases.picked_frog_index][skin_index]
 
 func change_frog(frog_index):
-	picked_frog_index = frog_index
+	ShopPurchases.picked_frog_index = frog_index
 	$BodySprite.texture = skins[frog_index][0]
 	$BodySprite/HeadPivot/HeadSprite.texture = skins[frog_index][0]

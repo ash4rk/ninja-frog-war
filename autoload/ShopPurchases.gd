@@ -2,6 +2,9 @@ extends Node
 
 signal coins_changed (new_value)
 
+var picked_skin_index : int = 0
+var picked_frog_index : int = 0
+
 var SAVE_PATH = "user://save"
 
 func _ready():
