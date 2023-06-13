@@ -40,7 +40,6 @@ signal player_dead ()
 
 onready var initial_scale = scale
 onready var body_sprite: Sprite = $BodySprite
-onready var fin_sprite: Sprite = $FinSprite
 onready var back_pickup_position: Position2D = $BackPickupPosition
 onready var front_pickup_position: Position2D = $FrontPickupPosition
 onready var pickup_area: Area2D = $PickupArea
@@ -80,7 +79,6 @@ func _ready():
 	state_machine.set_physics_process(false)
 
 	body_sprite.texture = skin_resources[player_skin]
-	fin_sprite.texture = skin_resources[player_skin]
 	reset_state()
 
 func set_player_skin(_player_skin: int) -> void:
@@ -89,7 +87,6 @@ func set_player_skin(_player_skin: int) -> void:
 
 		if body_sprite != null:
 			body_sprite.texture = skin_resources[player_skin]
-			fin_sprite.texture = skin_resources[player_skin]
 
 func set_player_name(_player_name: String) -> void:
 	# @todo Implement
@@ -135,11 +132,6 @@ func play_animation(name) -> void:
 
 func get_current_animation() -> String:
 	return sprite_animation_player.current_animation
-
-func _on_BodySprite_frame_changed() -> void:
-	if not fin_sprite or not body_sprite:
-		yield(self, "ready")
-	fin_sprite.frame = body_sprite.frame + 7
 
 func reset_state() -> void:
 	var current_state_name = state_machine.current_state.name if state_machine.current_state != null else "None"

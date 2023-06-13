@@ -1,6 +1,5 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=43 format=2]
 
-[ext_resource path="res://assets/sprites/whale_orange.png" type="Texture" id=1]
 [ext_resource path="res://actors/player-states/Hurt.gd" type="Script" id=2]
 [ext_resource path="res://actors/player-states/Dead.gd" type="Script" id=3]
 [ext_resource path="res://actors/player-states/Duck.gd" type="Script" id=4]
@@ -439,14 +438,6 @@ hframes = 12
 vframes = 7
 frame = 8
 
-[node name="FinSprite" type="Sprite" parent="."]
-visible = false
-position = Vector2( 0, -31 )
-texture = ExtResource( 1 )
-hframes = 7
-vframes = 22
-frame = 7
-
 [node name="FrontPickupPosition" type="Position2D" parent="."]
 position = Vector2( -2, -20 )
 
@@ -607,7 +598,6 @@ bus = "Sound Effects"
 stream = ExtResource( 19 )
 bus = "Sound Effects"
 
-[connection signal="frame_changed" from="BodySprite" to="." method="_on_BodySprite_frame_changed"]
 [connection signal="body_exited" from="PassThroughDetectorArea" to="." method="_on_PassThroughDetectorArea_body_exited"]
 [connection signal="state_changed" from="StateMachine" to="." method="_on_StateMachine_state_changed"]
 [connection signal="timeout" from="StateMachine/Hurt/Timer" to="StateMachine/Hurt" method="_on_Timer_timeout"]
