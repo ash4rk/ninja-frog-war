@@ -50,3 +50,10 @@ func _on_Shop_pressed():
 
 func _on_AddCoinsButton_pressed():
 	YandexSdk.js_show_rewarded_ad()
+
+func _on_HowToPlayButton_pressed():
+	$HowToPlayOverlay.show()
+
+func _on_HowToPlayOverlay_gui_input(event):
+	if not event is InputEventMouseMotion:
+		$HowToPlayOverlay.hide()
