@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tadaa Fanfare.mp3-451c144338a13bc15f1d1f36c6778d84.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/fanfares/Tadaa Fanfare.mp3"
+dest_files=[ "res://.import/Tadaa Fanfare.mp3-451c144338a13bc15f1d1f36c6778d84.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

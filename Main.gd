@@ -202,7 +202,7 @@ remotesync func show_winner(name: String, peer_id: int = 0, score: int = 0, is_m
 	else:
 		ui_layer.show_message(name + " wins this round!")
 
-	yield(get_tree().create_timer(2.0), "timeout")
+	yield(get_tree().create_timer(4.5), "timeout")
 	if not game.game_started:
 		return
 

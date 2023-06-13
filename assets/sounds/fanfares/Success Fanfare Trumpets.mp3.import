@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Success Fanfare Trumpets.mp3-56543abf209929d2a77e2167faba3bc7.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/fanfares/Success Fanfare Trumpets.mp3"
+dest_files=[ "res://.import/Success Fanfare Trumpets.mp3-56543abf209929d2a77e2167faba3bc7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

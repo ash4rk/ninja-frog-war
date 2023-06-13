@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Trumpets Fanfare.mp3-34e9520f88947217ba0d455806dd69ca.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/fanfares/Trumpets Fanfare.mp3"
+dest_files=[ "res://.import/Trumpets Fanfare.mp3-34e9520f88947217ba0d455806dd69ca.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
