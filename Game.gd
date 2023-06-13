@@ -2,7 +2,10 @@ extends Node2D
 
 var Player = preload("res://actors/Player.tscn")
 
-export (PackedScene) var map_scene = preload("res://maps/Map4.tscn")
+const map_scenes = [
+	preload("res://maps/Map3.tscn"),
+	preload("res://maps/Map4.tscn")
+]
 
 onready var map: Node2D = $Map
 onready var players_node := $Players
@@ -101,11 +104,13 @@ func game_stop() -> void:
 		child.queue_free()
 
 func reload_map() -> void:
+	randomize()
+	
 	var map_index = map.get_index()
 	remove_child(map)
 	map.queue_free()
 
-	map = map_scene.instance()
+	map = map_scenes[randi() % map_scenes.size()-1].instance()
 	map.name = 'Map'
 	add_child(map)
 	move_child(map, map_index)
