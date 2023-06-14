@@ -20,8 +20,3 @@ func _on_throw() -> void:
 remotesync func _do_use() -> void:
 	animation_player.play("Swing")
 	sounds.play("Swing")
-
-func set_internal_pickup_position() -> void:
-	pass
-	self.position = Vector2(-27, 30)
-#	$CollisionShape2D.position = Vector2(-27, 19)
