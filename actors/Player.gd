@@ -101,6 +101,8 @@ var show_sliding := false setget set_show_sliding
 const ONE_WAY_PLATFORMS_COLLISION_BIT := 4
 var pass_through_one_way_platforms := false setget set_pass_through_one_way_platforms
 
+var hp = 5 setget _set_hp
+
 var vector := Vector2.ZERO
 var current_pickup: KinematicBody2D
 var current_pickup_position: Position2D
@@ -262,6 +264,8 @@ func hurt(node: Node2D) -> void:
 		push_back_vector = push_back_vector,
 	})
 
+	self.hp -= 1
+
 func die() -> void:
 	if GameState.online_play:
 		if is_network_master():
@@ -331,3 +335,12 @@ func _on_StateMachine_state_changed(state, info: Dictionary) -> void:
 	sync_forced = true
 	sync_state_info = info
 
+func _set_hp(value):
+	if not is_network_master():
+		return
+	hp = value
+	
+	rpc("_update_remote_hp", hp)
+
+remote func _update_remote_hp(value) -> void:
+  hp = value

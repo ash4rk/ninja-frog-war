@@ -14,5 +14,8 @@ func _state_exit() -> void:
 	timer.stop()
 
 func _on_Timer_timeout() -> void:
-	if host.state_machine.current_state == self:
+	if host.state_machine.current_state == self and host.hp > 0:
+		host.state_machine.change_state("Idle")
+		
+	if host.state_machine.current_state == self and host.hp <= 0:
 		host.state_machine.change_state("Dead")
