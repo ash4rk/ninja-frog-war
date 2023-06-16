@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://components/Title.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/theme.tres" type="Theme" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://assets/sprites/menu/video-ads.png" type="Texture" id=11]
 [ext_resource path="res://assets/sprites/menu/retro-controller.png" type="Texture" id=12]
 [ext_resource path="res://assets/sprites/menu/hint-controls.png" type="Texture" id=13]
+[ext_resource path="res://main/screens/HowToPlayButton.gd" type="Script" id=14]
 
 [sub_resource type="Animation" id=14]
 length = 0.001
@@ -673,6 +674,7 @@ text = "Controls"
 icon = ExtResource( 12 )
 icon_align = 2
 expand_icon = true
+script = ExtResource( 14 )
 
 [node name="HowToPlayOverlay" type="ColorRect" parent="."]
 visible = false
