@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ninja-frog-pink-spritesheet.png-adfc98e25bfcae3a7bcd6727054fe600.stex"
+path="res://.import/body-head-frog-purple.png-9e4f0a9f204da99c090ad7f8fb9fed1b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ninja-frog/ninja-frog-pink-spritesheet.png"
-dest_files=[ "res://.import/ninja-frog-pink-spritesheet.png-adfc98e25bfcae3a7bcd6727054fe600.stex" ]
+source_file="res://assets/sprites/ninja-frog/body-head-frog-purple.png"
+dest_files=[ "res://.import/body-head-frog-purple.png-9e4f0a9f204da99c090ad7f8fb9fed1b.stex" ]
 
 [params]
 

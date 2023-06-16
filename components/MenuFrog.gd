@@ -3,38 +3,54 @@ extends Node2D
 onready var head_sprite = $BodySprite/HeadPivot/HeadSprite
 onready var shadow_sprite = $ShadowPivot/Shadow
 
+# strictly follow this order
+# "green", "purple", "red", "cyan", "pink", "orange", "blue", "yellow"
 
 var frog_skin_resources = [
 	preload("res://assets/sprites/ninja-frog/body-head-frog.png"),
-	preload("res://assets/sprites/ninja-frog/body-head-frog-pink.png"),
+	preload("res://assets/sprites/ninja-frog/body-head-frog-purple.png"),
 	preload("res://assets/sprites/ninja-frog/body-head-frog-red.png"),
 	preload("res://assets/sprites/ninja-frog/body-head-frog-cyan.png"),
+	"pink",
+	"orange",
+	"blue",
+	"yellow"
 ]
 
 var mask_dude_resources = [
 	preload("res://assets/sprites/mask-dude/mask-dude-body-head-green.png"),
-	preload("res://assets/sprites/mask-dude/mask-dude-body-head-pink.png"),
-	preload("res://assets/sprites/mask-dude/mask-dude-body-head-base.png"),
-	preload("res://assets/sprites/mask-dude/mask-dude-body-head-light-blue.png"),
-	# are not yet in use
-	preload("res://assets/sprites/mask-dude/mask-dude-body-head-yellow.png"),
 	preload("res://assets/sprites/mask-dude/mask-dude-body-head-purple.png"),
+	"red",
+	"cyan",
+	preload("res://assets/sprites/mask-dude/mask-dude-body-head-pink.png"),
+	preload("res://assets/sprites/mask-dude/mask-dude-body-head-base.png"), #(this is orange)
+	preload("res://assets/sprites/mask-dude/mask-dude-body-head-light-blue.png"),
+	preload("res://assets/sprites/mask-dude/mask-dude-body-head-yellow.png"),
+	# are not yet in use
 	preload("res://assets/sprites/mask-dude/mask-dude-body-head-super-white.png"),
 	#
 ]
 
 var pink_man_resources = [
-	preload("res://assets/sprites/pink-man/pink-man-body-head-base.png"),
 	preload("res://assets/sprites/pink-man/pink-man-body-head-green.png"),
 	preload("res://assets/sprites/pink-man/pink-man-body-head-purple.png"),
+	"red",
+	"cyan",
+	preload("res://assets/sprites/pink-man/pink-man-body-head-base.png"),
+	"orange",
+	"blue",
 	preload("res://assets/sprites/pink-man/pink-man-body-head-yellow.png"),
 ]
 
 var virtual_guy_resources = [
-	preload("res://assets/sprites/virtual-guy/body-head-base-virtual-guy.png"),
 	preload("res://assets/sprites/virtual-guy/body-head-green-virtual-guy.png"),
-	preload("res://assets/sprites/virtual-guy/body-head-orange-virtual-guy.png"),
 	preload("res://assets/sprites/virtual-guy/body-head-purple-virtual-guy.png"),
+	"red",
+	"cyan",
+	"pink",
+	preload("res://assets/sprites/virtual-guy/body-head-orange-virtual-guy.png"),
+	preload("res://assets/sprites/virtual-guy/body-head-base-virtual-guy.png"),
+	"yellow"
 ]
 
 var skins = [

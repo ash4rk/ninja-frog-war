@@ -13,14 +13,14 @@ enum PlayerSkin {
 
 var skin_resources = [
 	preload("res://assets/sprites/ninja-frog/ninja-frog-spritesheet.png"),
-	preload("res://assets/sprites/ninja-frog/ninja-frog-pink-spritesheet.png"),
+	preload("res://assets/sprites/ninja-frog/ninja-frog-purple-spritesheet.png"),
 	preload("res://assets/sprites/ninja-frog/ninja-frog-dark-green-spritesheet.png"),
 	preload("res://assets/sprites/ninja-frog/ninja-frog-red-spritesheet.png"),
 ]
 
 var frog_skin_resources = [
 	preload("res://assets/sprites/ninja-frog/ninja-frog-spritesheet.png"),
-	preload("res://assets/sprites/ninja-frog/ninja-frog-pink-spritesheet.png"),
+	preload("res://assets/sprites/ninja-frog/ninja-frog-purple-spritesheet.png"),
 	preload("res://assets/sprites/ninja-frog/ninja-frog-red-spritesheet.png"),
 	preload("res://assets/sprites/ninja-frog/ninja-frog-dark-green-spritesheet.png"),
 ]

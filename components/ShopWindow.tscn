@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://components/ShopCharItem.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/fonts/monogram-cyrillic-extended.ttf" type="DynamicFontData" id=2]
@@ -100,6 +100,23 @@ shadow_offset = Vector2( 2.79, 3.891 )
 anti_aliasing = false
 anti_aliasing_size = 1.538
 
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.537255, 0, 0.0352941, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.337255, 0, 0.0196078, 1 )
 border_width_left = 2
@@ -134,13 +151,13 @@ shadow_offset = Vector2( 2.79, 3.891 )
 anti_aliasing = false
 anti_aliasing_size = 1.538
 
-[sub_resource type="StyleBoxFlat" id=9]
+[sub_resource type="StyleBoxFlat" id=41]
 bg_color = Color( 0, 0.627451, 0.631373, 0.686275 )
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color( 0, 0.258152, 0.259766, 1 )
+border_color = Color( 0, 0.258824, 0.258824, 1 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -151,8 +168,8 @@ shadow_offset = Vector2( 2.79, 3.891 )
 anti_aliasing = false
 anti_aliasing_size = 1.538
 
-[sub_resource type="StyleBoxFlat" id=10]
-bg_color = Color( 0, 0.380392, 0.380392, 1 )
+[sub_resource type="StyleBoxFlat" id=42]
+bg_color = Color( 0, 0.362966, 0.365234, 1 )
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -219,6 +236,346 @@ shadow_offset = Vector2( 2.79, 3.891 )
 anti_aliasing = false
 anti_aliasing_size = 1.538
 
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 1, 0.25098, 0.541176, 0.686275 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.47451, 0.133333, 0.262745, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.624023, 0.160881, 0.340319, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0, 0.501961, 0.505882, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0, 0.627451, 0.631373, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0.258152, 0.259766, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 1, 0.25098, 0.541176, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.474609, 0.13163, 0.264512, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=36]
+bg_color = Color( 1, 0.6, 0.34902, 0.686275 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.407843, 0.243137, 0.137255, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=37]
+bg_color = Color( 0.619141, 0.36948, 0.21283, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=38]
+bg_color = Color( 1, 0.6, 0.34902, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=39]
+bg_color = Color( 0.669922, 0.528421, 0.439636, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.407843, 0.243137, 0.137255, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=40]
+bg_color = Color( 1, 0.59993, 0.347656, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.408203, 0.241641, 0.137131, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0.156863, 0.184314, 0.843137, 0.686275 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0784314, 0.0941176, 0.439216, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=32]
+bg_color = Color( 0.103741, 0.121271, 0.541992, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=33]
+bg_color = Color( 0.156863, 0.184314, 0.843137, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=34]
+bg_color = Color( 0.611765, 0.615686, 0.72549, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0784314, 0.0941176, 0.439216, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=35]
+bg_color = Color( 0.156863, 0.184314, 0.843137, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0786133, 0.0929687, 0.4375, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.996078, 1, 0.25098, 0.686275 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.4, 0.403922, 0.113725, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.407843, 0.407843, 0.0941176, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.407843, 0.407843, 0.0941176, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.996078, 1, 0.25098, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.4, 0.403922, 0.113725, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.996078, 1, 0.25098, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.40083, 0.402344, 0.113159, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0, 0, 0, 0.227451 )
+shadow_size = 1
+shadow_offset = Vector2( 2.79, 3.891 )
+anti_aliasing = false
+anti_aliasing_size = 1.538
+
 [node name="ShopWindow" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -244,28 +601,40 @@ margin_bottom = -2.0
 script = ExtResource( 5 )
 group = ExtResource( 4 )
 
-[node name="GridContainer" type="GridContainer" parent="TabContainer/Colours"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Colours"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 8.0
-margin_bottom = -34.0
+
+[node name="Space" type="Control" parent="TabContainer/Colours/VBoxContainer"]
+margin_right = 198.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 0, 8 )
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Colours/VBoxContainer"]
+margin_top = 12.0
+margin_right = 198.0
+margin_bottom = 149.0
 grow_horizontal = 0
 grow_vertical = 0
+rect_min_size = Vector2( 0, 100 )
 custom_constants/vseparation = 13
+custom_constants/hseparation = 9
 columns = 3
 
-[node name="GreenColButton" parent="TabContainer/Colours/GridContainer" instance=ExtResource( 6 )]
-margin_left = 14.0
-margin_right = 49.0
+[node name="GreenColButton" parent="TabContainer/Colours/VBoxContainer/GridContainer" instance=ExtResource( 6 )]
+margin_left = 12.0
+margin_right = 47.0
 margin_bottom = 37.0
+focus_mode = 0
 size_flags_horizontal = 6
 toggle_mode = true
 group = ExtResource( 4 )
 
-[node name="PinkColButton" parent="TabContainer/Colours/GridContainer" instance=ExtResource( 6 )]
-margin_left = 82.0
-margin_right = 117.0
+[node name="PurpleColButton" parent="TabContainer/Colours/VBoxContainer/GridContainer" instance=ExtResource( 6 )]
+margin_left = 81.0
+margin_right = 116.0
 margin_bottom = 37.0
+focus_mode = 0
 size_flags_horizontal = 6
 custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 8 )
@@ -273,15 +642,17 @@ custom_styles/focus = SubResource( 6 )
 custom_styles/normal = SubResource( 7 )
 toggle_mode = true
 group = ExtResource( 4 )
-colour = "pink"
+colour = "purple"
 skin_index = 1
 
-[node name="RedColButton" parent="TabContainer/Colours/GridContainer" instance=ExtResource( 6 )]
-margin_left = 149.0
-margin_right = 184.0
+[node name="RedColButton" parent="TabContainer/Colours/VBoxContainer/GridContainer" instance=ExtResource( 6 )]
+margin_left = 150.0
+margin_right = 185.0
 margin_bottom = 37.0
+focus_mode = 0
 size_flags_horizontal = 6
 custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 20 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 toggle_mode = true
@@ -289,14 +660,15 @@ group = ExtResource( 4 )
 colour = "red"
 skin_index = 2
 
-[node name="CyanColButton" parent="TabContainer/Colours/GridContainer" instance=ExtResource( 6 )]
-margin_left = 14.0
+[node name="CyanColButton" parent="TabContainer/Colours/VBoxContainer/GridContainer" instance=ExtResource( 6 )]
+margin_left = 12.0
 margin_top = 50.0
-margin_right = 49.0
+margin_right = 47.0
 margin_bottom = 87.0
+focus_mode = 0
 size_flags_horizontal = 6
-custom_styles/hover = SubResource( 9 )
-custom_styles/pressed = SubResource( 10 )
+custom_styles/hover = SubResource( 41 )
+custom_styles/pressed = SubResource( 42 )
 custom_styles/focus = SubResource( 11 )
 custom_styles/disabled = SubResource( 12 )
 custom_styles/normal = SubResource( 13 )
@@ -304,6 +676,84 @@ toggle_mode = true
 group = ExtResource( 4 )
 colour = "cyan"
 skin_index = 3
+
+[node name="PinkColButton" parent="TabContainer/Colours/VBoxContainer/GridContainer" instance=ExtResource( 6 )]
+margin_left = 81.0
+margin_top = 50.0
+margin_right = 116.0
+margin_bottom = 87.0
+focus_mode = 0
+size_flags_horizontal = 6
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/focus = SubResource( 23 )
+custom_styles/disabled = SubResource( 24 )
+custom_styles/normal = SubResource( 25 )
+toggle_mode = true
+group = ExtResource( 4 )
+colour = "pink"
+skin_index = 4
+
+[node name="OrangeColButton" parent="TabContainer/Colours/VBoxContainer/GridContainer" instance=ExtResource( 6 )]
+margin_left = 150.0
+margin_top = 50.0
+margin_right = 185.0
+margin_bottom = 87.0
+focus_mode = 0
+size_flags_horizontal = 6
+custom_styles/hover = SubResource( 36 )
+custom_styles/pressed = SubResource( 37 )
+custom_styles/focus = SubResource( 38 )
+custom_styles/disabled = SubResource( 39 )
+custom_styles/normal = SubResource( 40 )
+toggle_mode = true
+group = ExtResource( 4 )
+colour = "orange"
+skin_index = 5
+
+[node name="BlueColButton" parent="TabContainer/Colours/VBoxContainer/GridContainer" instance=ExtResource( 6 )]
+margin_left = 12.0
+margin_top = 100.0
+margin_right = 47.0
+margin_bottom = 137.0
+focus_mode = 0
+size_flags_horizontal = 6
+custom_styles/hover = SubResource( 31 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/focus = SubResource( 33 )
+custom_styles/disabled = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+toggle_mode = true
+group = ExtResource( 4 )
+colour = "blue"
+skin_index = 6
+
+[node name="YellowColButton" parent="TabContainer/Colours/VBoxContainer/GridContainer" instance=ExtResource( 6 )]
+margin_left = 81.0
+margin_top = 100.0
+margin_right = 116.0
+margin_bottom = 137.0
+focus_mode = 0
+size_flags_horizontal = 6
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/focus = SubResource( 17 )
+custom_styles/disabled = SubResource( 18 )
+custom_styles/normal = SubResource( 19 )
+toggle_mode = true
+group = ExtResource( 4 )
+colour = "yellow"
+skin_index = 7
+
+[node name="BuyButton" type="Button" parent="TabContainer/Colours/VBoxContainer"]
+margin_left = 59.0
+margin_top = 153.0
+margin_right = 139.0
+margin_bottom = 190.0
+rect_min_size = Vector2( 80, 0 )
+size_flags_horizontal = 6
+size_flags_vertical = 5
+text = "Buy"
 
 [node name="Frogs" type="Control" parent="TabContainer"]
 visible = false
@@ -355,3 +805,6 @@ margin_bottom = 92.0
 shop_icon = ExtResource( 7 )
 item_index = 3
 price = 6300
+
+[connection signal="visibility_changed" from="TabContainer/Colours/VBoxContainer/GridContainer" to="TabContainer/Colours" method="_on_GridContainer_visibility_changed"]
+[connection signal="pressed" from="TabContainer/Colours/VBoxContainer/BuyButton" to="TabContainer/Colours" method="_on_BuyButton_pressed"]
