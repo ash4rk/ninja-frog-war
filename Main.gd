@@ -5,6 +5,9 @@ onready var TROPHY_SCENE := preload("res://pickups/Trophy.tscn")
 
 onready var game = $Game
 onready var ui_layer: UILayer = $UILayer
+onready var one_vs_one_score_container: PanelContainer = $UILayer/Overlay/ScoreContainer1v1
+onready var health_ui: Control = $UILayer/Overlay/HealthUI
+onready var second_player_health_ui := $UILayer/Overlay/SecondPlayerHealthUI
 onready var ready_screen = $UILayer/Screens/ReadyScreen
 onready var music := $Music
 
@@ -59,7 +62,8 @@ func _on_UILayer_change_screen(name: String, _screen) -> void:
 
 func _on_UILayer_back_button() -> void:
 	ui_layer.hide_message()
-	$UILayer/Overlay/HealthUI.hide()
+	health_ui.hide()
+	second_player_health_ui.hide()
 
 	stop_game()
 
@@ -70,7 +74,7 @@ func _on_UILayer_back_button() -> void:
 		ui_layer.show_screen("TitleScreen")
 	elif not GameState.online_play:
 		ui_layer.show_screen("TitleScreen")
-		$UILayer/Overlay/ScoreContainer.drop_score()
+		one_vs_one_score_container.drop_score()
 	else:
 		ui_layer.show_screen("MatchScreen")
 
