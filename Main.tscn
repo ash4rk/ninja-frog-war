@@ -135,7 +135,7 @@ script = ExtResource( 17 )
 visible = false
 mouse_filter = 2
 
-[node name="ScoreContainer" type="PanelContainer" parent="UILayer/Overlay"]
+[node name="ScoreContainer1v1" type="PanelContainer" parent="UILayer/Overlay"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -29.5
@@ -147,7 +147,7 @@ grow_vertical = 2
 theme = ExtResource( 13 )
 script = ExtResource( 20 )
 
-[node name="ScoreLabel" type="Label" parent="UILayer/Overlay/ScoreContainer"]
+[node name="ScoreLabel" type="Label" parent="UILayer/Overlay/ScoreContainer1v1"]
 margin_left = 2.0
 margin_top = 5.0
 margin_right = 57.0
@@ -156,7 +156,7 @@ text = "0:0"
 align = 1
 valign = 1
 
-[node name="Tween" type="Tween" parent="UILayer/Overlay/ScoreContainer"]
+[node name="Tween" type="Tween" parent="UILayer/Overlay/ScoreContainer1v1"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UILayer"]
 anims/win_messaging = SubResource( 1 )

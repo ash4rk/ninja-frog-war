@@ -12,6 +12,7 @@ onready var players_node := $Players
 onready var camera := $Camera2D
 onready var anim_player := $CanvasLayer/AnimationPlayer
 onready var health_ui := $"../UILayer/Overlay/HealthUI"
+onready var one_vs_one_score_container := $"../UILayer/Overlay/ScoreContainer1v1"
 onready var original_camera_position: Vector2 = camera.global_position
 
 var game_started := false
@@ -34,7 +35,7 @@ remotesync func _do_game_setup(players: Dictionary) -> void:
 	get_tree().set_pause(true)
 	
 	if players.size() == 2:
-		$"../UILayer/Overlay/ScoreContainer".init()
+		one_vs_one_score_container.init()
 
 	if game_started:
 		game_stop()
@@ -60,7 +61,7 @@ remotesync func _do_game_setup(players: Dictionary) -> void:
 
 		if not GameState.online_play:
 			other_player.player_controlled = true
-			other_player.input_prefix = "player" + str(player_number) + "_"
+			other_player.input_fefix = "player" + str(player_number) + "_"
 
 		player_number += 1
 
