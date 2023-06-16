@@ -16,7 +16,6 @@ func init(player_value):
 		self._set_hearts(player.hp)
 
 func _set_hearts(new_value):
-	print(new_value)
 	hearts = clamp(new_value, 0, max_hearts)
 	if full_heart_rect != null:
 		full_heart_rect.rect_size.x = hearts * 40
