@@ -11,6 +11,7 @@ onready var map: Node2D = $Map
 onready var players_node := $Players
 onready var camera := $Camera2D
 onready var anim_player := $CanvasLayer/AnimationPlayer
+onready var health_ui := $"../UILayer/Overlay/HealthUI"
 onready var original_camera_position: Vector2 = camera.global_position
 
 var game_started := false
@@ -68,13 +69,13 @@ remotesync func _do_game_setup(players: Dictionary) -> void:
 	if GameState.online_play:
 		var my_id := get_tree().get_network_unique_id()
 		var my_player := players_node.get_node(str(my_id))
-		$"../UILayer/Overlay/HealthUI".init(my_player)
+		health_ui.init(my_player)
 		my_player.player_controlled = true
 
 		# Tell the host that we've finished setup.
 		rpc_id(1, '_finished_game_setup', my_id)
 	else:
-		$"../UILayer/Overlay/HealthUI".init(players_node.get_node(str(1)))
+		health_ui.init(players_node.get_node(str(1)))
 		_do_game_start()
 
 # Records when each player has finished setup so we know when all players are ready.
