@@ -17,7 +17,12 @@ func init(player_value):
 
 func _set_hearts(new_value):
 	hearts = clamp(new_value, 0, max_hearts)
-	if full_heart_rect != null:
+	if full_heart_rect == null: return
+
+	if full_heart_rect.flip_h:
+		full_heart_rect.rect_position.x = 572 - hearts * 40
+		full_heart_rect.rect_size.x = hearts * 40
+	else:
 		full_heart_rect.rect_size.x = hearts * 40
 
 func _set_max_hearts(new_value):
