@@ -68,11 +68,13 @@ remotesync func _do_game_setup(players: Dictionary) -> void:
 	if GameState.online_play:
 		var my_id := get_tree().get_network_unique_id()
 		var my_player := players_node.get_node(str(my_id))
+		$"../UILayer/Overlay/HealthUI".init(my_player)
 		my_player.player_controlled = true
 
 		# Tell the host that we've finished setup.
 		rpc_id(1, '_finished_game_setup', my_id)
 	else:
+		$"../UILayer/Overlay/HealthUI".init(players_node.get_node(str(1)))
 		_do_game_start()
 
 # Records when each player has finished setup so we know when all players are ready.
@@ -109,7 +111,6 @@ func reload_map() -> void:
 	var map_index = map.get_index()
 	remove_child(map)
 	map.queue_free()
-
 	map = map_scenes[randi() % map_scenes.size()-1].instance()
 	map.name = 'Map'
 	add_child(map)

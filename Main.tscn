@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://main/screens/ConnectionScreen.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://assets/ui/back.png" type="Texture" id=18]
 [ext_resource path="res://assets/blue_button_theme.tres" type="Theme" id=19]
 [ext_resource path="res://components/ScoreContainer.gd" type="Script" id=20]
+[ext_resource path="res://components/HealthUI.tscn" type="PackedScene" id=21]
 
 [sub_resource type="Animation" id=1]
 resource_name = "win_messaging"
@@ -129,6 +130,10 @@ icon = ExtResource( 16 )
 clip_text = true
 expand_icon = true
 script = ExtResource( 17 )
+
+[node name="HealthUI" parent="UILayer/Overlay" instance=ExtResource( 21 )]
+visible = false
+mouse_filter = 2
 
 [node name="ScoreContainer" type="PanelContainer" parent="UILayer/Overlay"]
 anchor_left = 0.5

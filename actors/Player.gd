@@ -77,6 +77,7 @@ export (bool) var player_controlled := false
 export (String) var input_prefix := "player1_"
 
 signal player_dead ()
+signal health_changed (value)
 
 onready var initial_scale = scale
 onready var body_sprite: Sprite = $BodySprite
@@ -101,6 +102,7 @@ var show_sliding := false setget set_show_sliding
 const ONE_WAY_PLATFORMS_COLLISION_BIT := 4
 var pass_through_one_way_platforms := false setget set_pass_through_one_way_platforms
 
+const max_hp: int = 5
 var hp = 5 setget _set_hp
 
 var vector := Vector2.ZERO
@@ -343,6 +345,8 @@ func _set_hp(value):
 	
 	if GameState.online_play:
 		rpc("_update_remote_hp", hp)
+	
+	emit_signal("health_changed", hp)
 
 remote func _update_remote_hp(value) -> void:
   hp = value

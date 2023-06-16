@@ -59,12 +59,12 @@ func _on_UILayer_change_screen(name: String, _screen) -> void:
 
 func _on_UILayer_back_button() -> void:
 	ui_layer.hide_message()
+	$UILayer/Overlay/HealthUI.hide()
 
 	stop_game()
 
 	if GameState.online_play:
 		OnlineMatch.leave()
-		$UILayer/Overlay/ScoreContainer.drop_score()
 
 	if ui_layer.current_screen_name in ['ConnectionScreen', 'MatchScreen', 'CreditsScreen']:
 		ui_layer.show_screen("TitleScreen")
@@ -119,7 +119,7 @@ remotesync func player_ready(peer_id: int) -> void:
 		players_ready[peer_id] = true
 		if players_ready.size() == OnlineMatch.players.size():
 			if OnlineMatch.match_state != OnlineMatch.MatchState.PLAYING:
-				OnlineMatch.start_playing()
+				OnlineMatch.start_playing() 
 			start_game()
 
 func start_game() -> void:
