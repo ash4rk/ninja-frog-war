@@ -336,11 +336,13 @@ func _on_StateMachine_state_changed(state, info: Dictionary) -> void:
 	sync_state_info = info
 
 func _set_hp(value):
-	if not is_network_master():
+	if GameState.online_play and not is_network_master():
 		return
+	
 	hp = value
 	
-	rpc("_update_remote_hp", hp)
+	if GameState.online_play:
+		rpc("_update_remote_hp", hp)
 
 remote func _update_remote_hp(value) -> void:
   hp = value
