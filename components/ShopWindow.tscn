@@ -746,6 +746,7 @@ colour = "yellow"
 skin_index = 7
 
 [node name="BuyButton" type="Button" parent="TabContainer/Colours/VBoxContainer"]
+visible = false
 margin_left = 59.0
 margin_top = 153.0
 margin_right = 139.0

@@ -62,7 +62,6 @@ var skins = [
 
 var max_dist = 1
 var max_shadow_dist = Vector2(0.5, 0.1)
-var active_skin_index: int = 0
 
 func _ready():
 	$AnimationPlayer.play("idle")
@@ -82,8 +81,19 @@ func change_skin(skin_index):
 	ShopPurchases.picked_skin_index = skin_index
 	$BodySprite.texture = skins[ShopPurchases.picked_frog_index][skin_index]
 	$BodySprite/HeadPivot/HeadSprite.texture = skins[ShopPurchases.picked_frog_index][skin_index]
+	_check_for_ownership()
+
 
 func change_frog(frog_index):
 	ShopPurchases.picked_frog_index = frog_index
 	$BodySprite.texture = skins[frog_index][0]
 	$BodySprite/HeadPivot/HeadSprite.texture = skins[frog_index][0]
+	_check_for_ownership()
+
+func _check_for_ownership():
+	if !ShopPurchases.is_skin_owned(ShopPurchases.picked_skin_index):
+		self.modulate = Color(0.25, 0.25, 0.25, 1.0)
+		$LockSprite.show()
+	else:
+		self.modulate = Color(1.0, 1.0, 1.0, 1.0)
+		$LockSprite.hide()

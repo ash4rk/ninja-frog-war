@@ -26,6 +26,7 @@ func _on_Button_pressed():
 		_try_to_buy_character()
 	else:
 		_frog_scene.change_frog(item_index)
+		$"../../../..".current_tab = 0
 		emit_signal("char_picked", item_index)
 	
 func _try_to_buy_character():
