@@ -63,7 +63,6 @@ var SAVE_PATH = "user://save"
 
 func _ready():
 	load_data()
-	print(save_data)
 
 var save_data = {
 	"coins_value" : 0,
