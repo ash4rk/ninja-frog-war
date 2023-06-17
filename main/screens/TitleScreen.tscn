@@ -389,6 +389,7 @@ tracks/0/keys = {
 
 [sub_resource type="StyleBoxFlat" id=8]
 content_margin_left = 12.0
+content_margin_right = 8.0
 bg_color = Color( 0.074707, 0.268455, 0.398438, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -584,10 +585,6 @@ group = SubResource( 17 )
 
 [node name="YellowColButton" parent="ShopWindow/TabContainer/Colours/VBoxContainer/GridContainer" index="7"]
 group = SubResource( 17 )
-
-[node name="BuyButton" parent="ShopWindow/TabContainer/Colours/VBoxContainer" index="2"]
-margin_left = 20.0
-margin_right = 178.0
 
 [node name="FrogCharItem" parent="ShopWindow/TabContainer/Frogs/ScrollContainer/VBoxContainer" index="0"]
 menu_frog_scene_path = NodePath("../../../../../../MenuFrog")
