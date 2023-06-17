@@ -54,29 +54,6 @@ var skins = [
 	virtual_guy_skins
 ]
 
-
-#var skins = {
-#	"frog_green" : true,
-#	"frog_pink" : false,
-#	"frog_red" : false,
-#	"frog_cyan" : false,
-#
-#	"dude_mask_green" : false,
-#	"dude_mask_pink" : false,
-#	"dude_mask_orange" : true,
-#	"dude_mask_blue" : false,
-#
-#	"pink_man_pink" : true,
-#	"pink_man_green" : false,
-#	"pink_man_purple" : false,
-#	"pink_man_yellow" : false,
-#
-#	"virtual_guy_blue" : true,
-#	"virtual_guy_green" : false,
-#	"virtual_guy_red" : false,
-#	"virtual_guy_pink" : false,
-#}
-
 signal coins_changed (new_value)
 
 var picked_skin_index : int = 0
@@ -92,7 +69,6 @@ var save_data = {
 	"coins_value" : 0,
 	"bought_characters" : [true, false, false, false],
 	"skins" : skins
-#	"bought_skins" : [true, false, false, false]
 } setget _save_data
 
 var coins :int = 5000 setget _set_coins
