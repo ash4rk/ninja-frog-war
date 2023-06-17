@@ -823,9 +823,9 @@ colour = "yellow"
 skin_index = 7
 
 [node name="BuyButton" type="Button" parent="TabContainer/Colours/VBoxContainer"]
-margin_left = 25.0
+margin_left = 23.0
 margin_top = 153.0
-margin_right = 173.0
+margin_right = 174.0
 margin_bottom = 190.0
 rect_min_size = Vector2( 80, 0 )
 size_flags_horizontal = 6

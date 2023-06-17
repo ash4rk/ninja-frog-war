@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/orange_one.png-bdd04dac08e8b3c60ca0a6e39b4f788b.stex"
+path="res://.import/padlock_old.png-8a4d0aae1aa339b508fd6af1c5ae11f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/orange_one.png"
-dest_files=[ "res://.import/orange_one.png-bdd04dac08e8b3c60ca0a6e39b4f788b.stex" ]
+source_file="res://assets/sprites/menu/padlock_old.png"
+dest_files=[ "res://.import/padlock_old.png-8a4d0aae1aa339b508fd6af1c5ae11f5.stex" ]
 
 [params]
 
@@ -32,4 +32,4 @@ process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=false
-svg/scale=0.001
+svg/scale=1.0

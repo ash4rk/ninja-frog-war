@@ -388,7 +388,7 @@ tracks/0/keys = {
 [sub_resource type="ButtonGroup" id=17]
 
 [sub_resource type="StyleBoxFlat" id=8]
-content_margin_left = 10.0
+content_margin_left = 12.0
 bg_color = Color( 0.074707, 0.268455, 0.398438, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -406,8 +406,8 @@ anti_aliasing = false
 anti_aliasing_size = 1.538
 
 [sub_resource type="StyleBoxFlat" id=9]
-content_margin_left = 10.0
-content_margin_right = 5.0
+content_margin_left = 12.0
+content_margin_right = 8.0
 bg_color = Color( 0.0423126, 0.154921, 0.230469, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -444,8 +444,8 @@ anti_aliasing = false
 anti_aliasing_size = 1.538
 
 [sub_resource type="StyleBoxFlat" id=11]
-content_margin_left = 10.0
-content_margin_right = 5.0
+content_margin_left = 12.0
+content_margin_right = 8.0
 bg_color = Color( 0.113725, 0.423529, 0.631373, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -585,6 +585,10 @@ group = SubResource( 17 )
 [node name="YellowColButton" parent="ShopWindow/TabContainer/Colours/VBoxContainer/GridContainer" index="7"]
 group = SubResource( 17 )
 
+[node name="BuyButton" parent="ShopWindow/TabContainer/Colours/VBoxContainer" index="2"]
+margin_left = 20.0
+margin_right = 178.0
+
 [node name="FrogCharItem" parent="ShopWindow/TabContainer/Frogs/ScrollContainer/VBoxContainer" index="0"]
 menu_frog_scene_path = NodePath("../../../../../../MenuFrog")
 
@@ -661,7 +665,6 @@ toggle_mode = true
 enabled_focus_mode = 0
 text = "Shop"
 icon = ExtResource( 8 )
-expand_icon = true
 
 [node name="CreditsButton" type="Button" parent="."]
 modulate = Color( 1, 1, 1, 0.686275 )
