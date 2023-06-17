@@ -15,6 +15,7 @@ func js_show_ad():
 func js_show_rewarded_ad():
 	if not win: 
 		print_debug("Trying to show rewarded ad but missing Yandex sdk")
+		_rewarded_ad(" ")
 		return
 	win.ShowAdRewardedVideo(callback_rewareded_ad)
 	# Stop sound
