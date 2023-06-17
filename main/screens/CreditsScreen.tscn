@@ -43,28 +43,46 @@ custom_fonts/bold_font = SubResource( 1 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[b]Programming:[/b]
-	[color=aqua]David Snopek[/color] from [color=yellow][url=https://www.snopekgames.com]Snopek Games[/url][/color]
+	[color=yellow][url=https://github.com/ash4rk/]Akulov Aleksey[/url][/color]
+	Base game foundation [color=yellow][url=https://github.com/heroiclabs/fishgame-godot]Fish Game[/url][/color] by [color=aqua]David Snopek[/color] 
+	from [color=yellow][url=https://www.snopekgames.com]Snopek Games[/url][/color]
 
 [b]Art:[/b]
-	[color=aqua]Orlando Herrera[/color] a.k.a. [color=yellow][url=https://pixelfrog-store.itch.io/]Pixel Frog[/url][/color]
+	[color=yellow][url=https://pixelfrog-assets.itch.io/pixel-adventure-1/]Pixel Adventure[/url][/color] by [color=aqua]Pixel Frog[/color] 
+	[color=yellow][url=https://arydian.itch.io/simple-wooden-bow-and-arrows/]Bow[/url][/color] by [color=aqua]Arydian[/color] 
+	[color=yellow][url=https://gg-undroid-games.itch.io/pixel-art-guns-with-firing-animations-3/]Pixel Art Guns[/url][/color] by [color=aqua]GG Undroid Games[/color] 
+	[color=yellow][url=https://arcadeisland.itch.io/guns-asset-pack-v1/]Guns Asset Pack-v1[/url][/color] by [color=aqua]Arcade Island[/color] 
+	[color=yellow][url=https://jasontomlee.itch.io/smoke-fx-free/]Smoke FX Free[/url][/color] by [color=aqua]jasontomlee[/color] 
+	[b]icons:[/b]
+	[color=yellow][url=https://game-icons.net/1x1/delapouite/shopping-bag.html/]Bag[/url][/color] by [color=aqua]Delapouite[/color] 
+	[color=yellow][url=https://game-icons.net/1x1/lorc/padlock.html/]Padlock[/url][/color] by [color=aqua]Lorc[/color] 
 
 [b]Music/Sound:[/b]
-	[color=aqua]Jakob T. Rypdal[/color]
+	[color=yellow][url=https://void1gaming.itch.io/platformer-music-pack-lite/]Platformer Music Pack[/url][/color] by [color=aqua]VOiD1 Gaming[/color] 
+	[color=yellow][url=https://bradfrey.itch.io/heroic-fanfare-music-pack-1/]Heroic Fanfare Music Pack[/url][/color] by [color=aqua]Brad Frey[/color] 
 
 [b]Font:[/b]
-	[color=yellow][url=https://datagoblin.itch.io/monogram]Monogram[/url][/color] by [color=aqua]Vinícius Menézio[/color]"
+	[color=yellow][url=https://datagoblin.itch.io/monogram]Monogram[/url][/color] by [color=aqua]Vinícius Menézio[/color]
+	Cyrillic [color=yellow][url=https://dmitriy-shmilo.itch.io/monogram-ua]fork[/url][/color] by [color=aqua]dmitriy-shmilo[/color]"
 text = "Programming:
-	David Snopek from Snopek Games
+	Akulov Aleksey
+	Base game foundation Fish Game by David Snopek 
+	from Snopek Games
 
 Art:
-	Orlando Herrera a.k.a. Pixel Frog
+	Pixel Adventure by Pixel Frog 
+	Bow by Arydian 
+	Pixel Art Guns by GG Undroid Games 
+	Guns Asset Pack-v1 by Arcade Island 
+	Smoke FX Free by jasontomlee 
+	icons:
+	Bag by Delapouite 
+	Padlock by Lorc 
 
 Music/Sound:
-	Jakob T. Rypdal
+	Platformer Music Pack by VOiD1 Gaming 
+	Heroic Fanfare Music Pack by Brad Frey 
 
 Font:
-	Monogram by Vinícius Menézio"
-scroll_active = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
+	Monogram by Vinícius Menézio
+	Cyrillic fork by dmitriy-shmilo"
