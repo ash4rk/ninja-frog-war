@@ -3,6 +3,8 @@ extends Control
 export (ButtonGroup) var group
 export (NodePath) var menu_frog_scene_path
 
+const SKIN_PRICE: int = 290
+
 onready var _frog_scene := get_node(menu_frog_scene_path)
 onready var _grid_container := $VBoxContainer/GridContainer
 onready var _buy_button := $VBoxContainer/BuyButton
@@ -34,10 +36,16 @@ func _on_GridContainer_visibility_changed():
 	_update_colour_buttons()
 
 func _on_BuyButton_pressed():
-	pass # Replace with function body.
-
-func _update_buy_button_state():
-	pass
+	if ShopPurchases.coins >= SKIN_PRICE:
+		ShopPurchases.coins -= SKIN_PRICE
+		var char_idx = ShopPurchases.picked_frog_index
+		var skin_idx = group.get_pressed_button().skin_index
+		ShopPurchases.save_data.skins[char_idx][skin_idx] = true
+		_buy_button.hide()
+		_update_colour_buttons()
+		_frog_scene.check_for_ownership()
+	else:
+		print("You need more coins")
 
 func _update_colour_buttons():
 	for colour_button in _grid_container.get_children():
