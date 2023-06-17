@@ -28,6 +28,8 @@ func _on_coins_changed(new_value) -> void:
 		$Coins/GainLabel.text = "+" + str(coins_diff)
 		yield(anim_player, "animation_finished")
 		anim_player.play("gain_popup")
+	else:
+		anim_player.play("coins_spend")
 	coins_label.text = str(new_value)
 	yield(anim_player, "animation_finished")
 	anim_player.play("idle")

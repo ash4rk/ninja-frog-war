@@ -37,13 +37,16 @@ func _on_GridContainer_visibility_changed():
 
 func _on_BuyButton_pressed():
 	if ShopPurchases.coins >= SKIN_PRICE:
+		_buy_button.disabled = true
 		ShopPurchases.coins -= SKIN_PRICE
 		var char_idx = ShopPurchases.picked_frog_index
 		var skin_idx = group.get_pressed_button().skin_index
 		ShopPurchases.save_data.skins[char_idx][skin_idx] = true
+		yield(get_tree().create_timer(1.7), "timeout")
 		_buy_button.hide()
 		_update_colour_buttons()
 		_frog_scene.check_for_ownership()
+		_buy_button.disabled = false
 	else:
 		print("You need more coins")
 
