@@ -24,13 +24,9 @@ Experience the game firsthand by checking it out on [my itch.io](https://ash4rk.
 ## Installation
 At this point you can use the original [method](https://github.com/heroiclabs/fishgame-godot#playing-the-game-from-source).
 
-## Credits
-* Game inspired by the Fish Game repo: https://github.com/heroiclabs/fishgame-godot
-* Assets created by Artist Name
-* Sound effects obtained from Sound Effects Library
-* Background music composed by Musician Name
-
 ## License
 Because the project is based on [Fish Game](https://github.com/heroiclabs/fishgame-godot) it is licensed under [Apache 2.0 License](LICENSE.txt).
+
 Most assets and resources are CC or MIT licensed.
-Check out [CREDITS.md](https://github.com/ash4rk/wars-wars-wars/CREDITS.md) for clarity and links to asset sources.
+
+Check out [CREDITS.md](https://github.com/ash4rk/wars-wars-wars/blob/main/CREDITS.md) for clarity and links to asset sources.
