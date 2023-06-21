@@ -98,10 +98,7 @@ func _save_data(new_value):
 	save_data = new_value
 	save_data()
 
-func is_picked_skin_owned() -> bool:
-	return save_data.skins[picked_frog_index][picked_skin_index]
-
-func is_skin_owned(skin_index) -> bool:
+func is_skin_owned(skin_index: int) -> bool:
 	return save_data.skins[picked_frog_index][skin_index]
 
 func get_first_owned_skin() -> int:

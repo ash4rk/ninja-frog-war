@@ -30,7 +30,7 @@ func _ready():
 
 func _on_button_pressed():
 	_frog_scene.change_skin(group.get_pressed_button().skin_index)
-	_buy_button.visible = !ShopPurchases.is_picked_skin_owned()
+	_buy_button.visible = !ShopPurchases.is_skin_owned(_frog_scene.preview_skin_index)
 
 func _on_GridContainer_visibility_changed():
 	_update_colour_buttons()
@@ -44,9 +44,9 @@ func _on_BuyButton_pressed():
 		ShopPurchases.save_data.skins[char_idx][skin_idx] = true
 		yield(get_tree().create_timer(1.7), "timeout")
 		_buy_button.hide()
-		_update_colour_buttons()
 		_frog_scene.check_for_ownership()
 		_buy_button.disabled = false
+		_update_colour_buttons()
 	else:
 		print("You need more coins")
 
@@ -62,4 +62,4 @@ func _update_colour_buttons():
 			if !ShopPurchases.is_skin_owned(colour_button.skin_index):
 				colour_button.modulate = Color(0.4, 0.4, 0.4)
 	
-	_buy_button.visible = !ShopPurchases.is_picked_skin_owned()
+	_buy_button.visible = !ShopPurchases.is_skin_owned(_frog_scene.preview_skin_index)
