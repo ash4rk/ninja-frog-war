@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ninja-frog-dark-green-spritesheet.png-fc49d6952f459579f1fbbe562f09d66f.stex"
+path="res://.import/ninja-frog-cyan-spritesheet.png-4c05d6cfa9c11aa837ac1ccf298e896b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ninja-frog/ninja-frog-dark-green-spritesheet.png"
-dest_files=[ "res://.import/ninja-frog-dark-green-spritesheet.png-fc49d6952f459579f1fbbe562f09d66f.stex" ]
+source_file="res://assets/sprites/ninja-frog/ninja-frog-cyan-spritesheet.png"
+dest_files=[ "res://.import/ninja-frog-cyan-spritesheet.png-4c05d6cfa9c11aa837ac1ccf298e896b.stex" ]
 
 [params]
 

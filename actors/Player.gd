@@ -14,7 +14,7 @@ enum PlayerSkin {
 var skin_resources = [
 	preload("res://assets/sprites/ninja-frog/ninja-frog-spritesheet.png"),
 	preload("res://assets/sprites/ninja-frog/ninja-frog-purple-spritesheet.png"),
-	preload("res://assets/sprites/ninja-frog/ninja-frog-dark-green-spritesheet.png"),
+	preload("res://assets/sprites/ninja-frog/ninja-frog-cyan-spritesheet.png"),
 	preload("res://assets/sprites/ninja-frog/ninja-frog-red-spritesheet.png"),
 ]
 
@@ -22,33 +22,47 @@ var frog_skin_resources = [
 	preload("res://assets/sprites/ninja-frog/ninja-frog-spritesheet.png"),
 	preload("res://assets/sprites/ninja-frog/ninja-frog-purple-spritesheet.png"),
 	preload("res://assets/sprites/ninja-frog/ninja-frog-red-spritesheet.png"),
-	preload("res://assets/sprites/ninja-frog/ninja-frog-dark-green-spritesheet.png"),
+	preload("res://assets/sprites/ninja-frog/ninja-frog-cyan-spritesheet.png"),
+	"pink",
+	"orange",
+	"blue",
+	"yellow"
 ]
 
 var mask_dude_resources = [
 	preload("res://assets/sprites/mask-dude/mask-dude-green-spritesheet.png"),
-	preload("res://assets/sprites/mask-dude/mask-dude-pink-spritesheet.png"),
-	preload("res://assets/sprites/mask-dude/mask-dude-spritesheet.png"),
-	preload("res://assets/sprites/mask-dude/mask-dude-light-blue-spritesheet.png"),
-	# are not yet in use
-	preload("res://assets/sprites/mask-dude/mask-dude-yellow-spritesheet.png"),
 	preload("res://assets/sprites/mask-dude/mask-dude-purple-spritesheet.png"),
+	"red",
+	"cyan",
+	preload("res://assets/sprites/mask-dude/mask-dude-pink-spritesheet.png"),
+	preload("res://assets/sprites/mask-dude/mask-dude-orange-spritesheet.png"),
+	preload("res://assets/sprites/mask-dude/mask-dude-light-blue-spritesheet.png"),
+	preload("res://assets/sprites/mask-dude/mask-dude-yellow-spritesheet.png"),
+	# are not yet in use
 	preload("res://assets/sprites/mask-dude/mask-dude-super-white-spritesheet.png"),
 	#
 ]
 
 var pink_man_resources = [
-	preload("res://assets/sprites/pink-man/pink-man-base-spritesheet.png"),
 	preload("res://assets/sprites/pink-man/pink-man-green-spritesheet.png"),
 	preload("res://assets/sprites/pink-man/pink-man-purple-spritesheet.png"),
+	"red",
+	"cyan",
+	preload("res://assets/sprites/pink-man/pink-man-pink-spritesheet.png"),
+	"orange",
+	"blue",
 	preload("res://assets/sprites/pink-man/pink-man-yellow-spritesheet.png"),
 ]
 
 var virtual_guy_resources = [
-	preload("res://assets/sprites/virtual-guy/virtual-guy-base-spritesheet.png"),
 	preload("res://assets/sprites/virtual-guy/virtual-guy-green-spritesheet.png"),
-	preload("res://assets/sprites/virtual-guy/virtual-guy-orange-spritesheet.png"),
 	preload("res://assets/sprites/virtual-guy/virtual-guy-purple-spritesheet.png"),
+	"red",
+	"cyan",
+	"pink",
+	preload("res://assets/sprites/virtual-guy/virtual-guy-orange-spritesheet.png"),
+	preload("res://assets/sprites/virtual-guy/virtual-guy-blue-spritesheet.png"),
+	"yellow"
 ]
 
 var skins = [
