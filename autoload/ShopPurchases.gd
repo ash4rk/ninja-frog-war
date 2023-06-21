@@ -103,3 +103,13 @@ func is_picked_skin_owned() -> bool:
 
 func is_skin_owned(skin_index) -> bool:
 	return save_data.skins[picked_frog_index][skin_index]
+
+func get_first_owned_skin() -> int:
+	var idx: int = 0
+	for is_skin_owned in save_data.skins[picked_frog_index]:
+		if is_skin_owned:
+			return idx
+		idx += 1
+	
+	assert(false, "Could not find even 1 owned skin")
+	return -1

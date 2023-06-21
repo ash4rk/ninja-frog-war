@@ -87,6 +87,7 @@ func change_frog(frog_index):
 	ShopPurchases.picked_frog_index = frog_index
 	$BodySprite.texture = skins[frog_index][0]
 	$BodySprite/HeadPivot/HeadSprite.texture = skins[frog_index][0]
+	change_skin(ShopPurchases.get_first_owned_skin())
 	check_for_ownership()
 
 func check_for_ownership():
