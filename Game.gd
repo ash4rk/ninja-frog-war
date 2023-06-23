@@ -120,6 +120,9 @@ func reload_map() -> void:
 	remove_child(map)
 	map.queue_free()
 	map = map_scenes[randi() % map_scenes.size()-1].instance()
+	#TODO: Fix map replication in online mode
+	if GameState.online_play:
+		map = map_scenes[0]
 	map.name = 'Map'
 	add_child(map)
 	move_child(map, map_index)
