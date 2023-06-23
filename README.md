@@ -1,12 +1,14 @@
 # Ninja Frog War 🐸🔥
 
-[![GitHub Release](https://img.shields.io/github/release/your-username/ninja-frog-war.svg)](https://github.com/your-username/ninja-frog-war/releases/latest)
-[![GitHub Issues](https://img.shields.io/github/issues/your-username/ninja-frog-war.svg)](https://github.com/your-username/ninja-frog-war/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/your-username/ninja-frog-war.svg)](https://github.com/your-username/ninja-frog-war/stargazers)
+![GitHub all releases](https://img.shields.io/github/downloads/ash4rk/ninja-frog-war/total)
+![GitHub issues](https://img.shields.io/github/issues/ash4rk/ninja-frog-war)
+![GitHub Repo stars](https://img.shields.io/github/stars/ash4rk/ninja-frog-war)
 
 Ninja Frog War is a multiplayer arena fighting 2D game based on [Fish Game](https://github.com/heroiclabs/fishgame-godot) repo, featuring different assets, expanded features, and slightly modified gameplay. Take control of a ninja frog and engage in epic battles!
 
-![TODO: screenshot here](screenshot.png)
+<img src="docs/screenshot_1.png" alt="Screenshot 1" />
+
+<img src="docs/screenshot_2.png" alt="Screenshot 2" />
 
 ## New Features
 
